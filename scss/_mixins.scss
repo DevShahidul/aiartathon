@@ -1,0 +1,81 @@
+// Border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin transition($transition...) {
+  /* defining prefixes so we can use them in mixins below*/
+  $prefixes: ("-webkit", "-ms", "-o", "");
+  @each $prefix in $prefixes {
+    #{$prefix}-transition: $transition;
+  }
+  transition: $transition;
+}
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+// translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+@mixin background-property {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100%;
+}
+// Flexbox display
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items($value: stretch) {
+  @if $value == flex-start {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
+  }
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+
+@mixin flex($props) {
+  @include flexbox;
+  @if $props == center {
+    @include align-items(center);
+    justify-content: center;
+  } @else if $props == centerY {
+    @include align-items(center);
+  } @else if $props == centerX {
+    justify-content: center;
+  }
+}
+
+// Center top left both position mixin
+@mixin centerBoth {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include transform(translateX(-50%) translateY(-50%));
+  text-align: center;
+}

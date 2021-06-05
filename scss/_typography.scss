@@ -1,0 +1,42 @@
+h2,
+h3,
+h6 {
+  font-family: $VisueltProMedium-font;
+  font-weight: 500;
+  color: $black;
+}
+h2 {
+  font-family: $VisueltProBold-font;
+  font-size: $heading2-fonts;
+  font-weight: 700;
+  line-height: $heading2-line-height;
+}
+h3 {
+  font-size: $heading3-fonts;
+  line-height: $heading3-line-height;
+}
+h6 {
+  font-size: $heading6-fonts;
+  line-height: $heading6-line-height;
+}
+strong {
+  font-family: $VisueltProBold-font;
+  font-weight: 700;
+}
+.small-text {
+  font-size: $small-fnts !important;
+}
+@include media-breakpoint-down(sm) {
+  /* Font Size */
+}
+
+body {
+  font-family: $default-font;
+  font-weight: $default-font-weight;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}

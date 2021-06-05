@@ -1,0 +1,52 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+ul {
+   list-style: none;
+}
+a {
+   display: inline-block;
+   text-decoration: none;
+}
+img {
+   max-width: 100%;
+   display: block;
+}
+body {
+   background-color: $white;
+   color: $black-light3;
+}
+p {
+   margin-bottom: 0;
+}
+
+.gradient-text {
+   background: $primary-gradient;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+::selection {
+   background-color: $pink;
+   color: #fff;
+}
+
+.container {
+   max-width: 100%;
+   margin: 0 auto;
+   padding-right: 50px;
+   padding-left: 50px;
+   @media screen and (max-width: 1200px) {
+      max-width: 960px;
+   }
+   @media screen and(max-width: 767px) {
+      padding-right: 30px;
+      padding-left: 30px;
+   }
+   @media screen and(max-width: 320px) {
+      padding-right: 15px;
+      padding-left: 15px;
+   }
+}

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Color */
+$primary: #262262;
+$secondary: #f9fafd;
+$primary-transparent: rgba(38, 34, 98, 0.8);
+$black-light: rgba(0, 0, 0, 0.8);
+$black-light2: rgba(0, 0, 0, 0.6);
+$black-light3: rgba(0, 0, 0, 0.4);
+$pink: #eb2770;
+$primary-gradient: linear-gradient(97.3deg, #221f57 -25.36%, #5b2a85 23.23%, #a22886 62.23%, #eb2770 106.03%);
+$secondary-gradient: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
+
+// Border colors
+$border-color: linear-gradient(to bottom, #221f57 100%, #5b2a85 100%, #a22886 100%, #eb2770 100%);
+
+//Border radius
+$btn-radius: 12px;
+
+//Fonts
+$default-font: "Poppins", sans-serif;
+$default-font-weight: 400;
+$medium-font-weight: 500;
+$semibold-font-weight: 600;
+$bold-font-weight: 700;
+
+/* Font Size */
+$heading2-fonts: 44px;
+$heading3-fonts: 28px;
+$heading4-fonts: 24px;
+$heading5-fonts: 20px;
+$heading6-fonts: 18px;
+$base-font-size: 16px;
+$small-fnts: 14px;
+
+/* Line Height */
+$heading2-line-height: 60px;
+$heading3-line-height: 42px;
+$heading4-line-height: 36px;
+$heading5-line-height: 30px;
+$base-line-height: 30px;
+$heading6-line-height: 27px;
