@@ -4,14 +4,21 @@
    cursor: pointer;
    box-shadow: none;
    padding: 20px 28px;
-   border-radius: 12px;
+   @include border-radius(12px);
    font-size: $base-font-size;
-   line-height: $base-line-height;
+   line-height: 23px;
    font-family: $default-font;
    font-weight: $default-font-weight;
    white-space: nowrap;
+   @include transition(opacity 0.3s ease-in);
+   &:hover {
+      opacity: 0.8;
+   }
    &:focus {
       outline: none;
       box-shadow: none;
+   }
+   @media screen and (max-width: 767px) {
+      padding: 12px 25px;
    }
 }

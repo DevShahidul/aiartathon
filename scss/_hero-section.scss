@@ -1,0 +1,80 @@
+.hero-section {
+   &::before {
+      content: url(../images/top-left-graphics-croped.png);
+      position: absolute;
+      left: 0;
+      top: 0;
+   }
+   .container {
+      width: 1367px;
+      .contents-wrap {
+         position: relative;
+         overflow: hidden;
+         z-index: 1;
+         padding: 50px;
+         min-height: 647px;
+         background-image: url(../images/hero-image.jpg);
+         @include background-property;
+         @include border-radius(54px);
+         @include flex(center);
+         &::before {
+            content: url(../images/hero-overlay.png);
+            position: absolute;
+            top: 0;
+            right: -86px;
+            z-index: -1;
+         }
+         @media screen and (max-width: 1024px) {
+            min-height: 300px;
+         }
+         .contents {
+            width: 730px;
+            max-width: 100%;
+            text-align: center;
+            color: $white;
+            @media screen and (max-width: 991px) {
+               width: 650px;
+            }
+            .count-down {
+               margin-top: 59px;
+               color: $white-light;
+               font-size: 34px;
+               line-height: 45px;
+               font-weight: $medium-font-weight;
+               @media screen and (max-width: 1024px) {
+                  margin-top: 30px;
+               }
+               @media screen and (max-width: 767px) {
+                  margin-top: 0;
+               }
+            }
+            h2 {
+               line-height: 64px;
+               letter-spacing: 0.01em;
+               margin-bottom: 28px;
+               @media screen and (max-width: 767px) {
+                  margin-bottom: 15px;
+               }
+            }
+            h6 {
+               font-weight: $light-font-weight;
+               margin-bottom: 8px;
+               @media screen and (max-width: 767px) {
+                  margin-bottom: 5px;
+               }
+            }
+            p {
+               letter-spacing: 0.01em;
+               font-weight: $small-fnts;
+               text-transform: uppercase;
+            }
+            .btn {
+               margin-top: 54px;
+               @media screen and (max-width: 767px) {
+                  margin-top: 30px;
+               }
+            }
+         }
+      }
+   }
+}

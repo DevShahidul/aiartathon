@@ -1,13 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300,400;500;600;700&display=swap");
 
 /* Color */
 $primary: #262262;
 $secondary: #f9fafd;
 $primary-transparent: rgba(38, 34, 98, 0.8);
+$black: #000000;
 $black-light: rgba(0, 0, 0, 0.8);
 $black-light2: rgba(0, 0, 0, 0.6);
 $black-light3: rgba(0, 0, 0, 0.4);
 $pink: #eb2770;
+$white: #ffffff;
+$white-light: rgba(255, 255, 255, 0.8);
 $primary-gradient: linear-gradient(97.3deg, #221f57 -25.36%, #5b2a85 23.23%, #a22886 62.23%, #eb2770 106.03%);
 $secondary-gradient: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
 
@@ -19,6 +22,7 @@ $btn-radius: 12px;
 
 //Fonts
 $default-font: "Poppins", sans-serif;
+$light-font-weight: 300;
 $default-font-weight: 400;
 $medium-font-weight: 500;
 $semibold-font-weight: 600;

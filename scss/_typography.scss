@@ -1,33 +1,38 @@
 h2,
 h3,
+h4,
+h5,
 h6 {
-  font-family: $VisueltProMedium-font;
-  font-weight: 500;
-  color: $black;
+  font-family: $default-font;
+  font-weight: $medium-font-weight;
 }
 h2 {
-  font-family: $VisueltProBold-font;
   font-size: $heading2-fonts;
-  font-weight: 700;
   line-height: $heading2-line-height;
+  font-weight: $bold-font-weight;
 }
 h3 {
   font-size: $heading3-fonts;
   line-height: $heading3-line-height;
+  font-weight: $semibold-font-weight;
+}
+h4 {
+  font-size: $heading4-fonts;
+  line-height: $heading4-line-height;
+}
+h5 {
+  font-size: $heading5-fonts;
+  line-height: $heading5-line-height;
 }
 h6 {
   font-size: $heading6-fonts;
   line-height: $heading6-line-height;
 }
 strong {
-  font-family: $VisueltProBold-font;
-  font-weight: 700;
+  font-weight: $bold-font-weight;
 }
 .small-text {
   font-size: $small-fnts !important;
-}
-@include media-breakpoint-down(sm) {
-  /* Font Size */
 }
 
 body {
@@ -39,4 +44,37 @@ body {
   -moz-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+@media screen and (max-width: 991px) {
+  h2 {
+    font-size: 36px;
+    line-height: 48px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 30px;
+    line-height: 48px !important;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 36px !important;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 28px !important;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 24px !important;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 22px !important;
+  }
+  body {
+    font-size: 14px;
+  }
 }
