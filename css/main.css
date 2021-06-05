@@ -720,6 +720,11 @@ section::before, section::after {
   margin-left: -10px;
   margin-right: -10px;
   margin-top: 34px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-flow: row wrap;
 }
 .card-row .card {
@@ -1050,6 +1055,7 @@ section::before, section::after {
 .roadmap-section {
   margin-top: 126px;
   padding-top: 197px;
+  padding-bottom: 146px;
   background: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
   border-radius: 54px;
   -webkit-clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
@@ -1059,12 +1065,14 @@ section::before, section::after {
   .roadmap-section {
     margin-top: 100px;
     padding-top: 130px;
+    padding-bottom: 100px;
   }
 }
 @media screen and (max-width: 767px) {
   .roadmap-section {
     margin-top: 60px;
     padding-top: 50px;
+    padding-bottom: 0;
     -webkit-clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
   }
@@ -1186,6 +1194,103 @@ section::before, section::after {
 }
 .roadmap-section .contents-row .content-item:last-child ul::before {
   display: none;
+}
+
+.skillset-section {
+  margin-top: 128px;
+}
+@media screen and (max-width: 991px) {
+  .skillset-section {
+    margin-top: 100px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skillset-section {
+    margin-top: 60px !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  .skillset-section {
+    margin-top: 10px !important;
+  }
+}
+.skillset-section .container {
+  flex-flow: row wrap;
+}
+.skillset-section .info {
+  width: 32.8703703704%;
+  padding-right: 30px;
+  margin-top: 32px;
+}
+@media screen and (max-width: 575px) {
+  .skillset-section .info {
+    width: 100%;
+  }
+}
+.skillset-section .info figure {
+  margin-bottom: 44px;
+  width: 277px;
+  max-width: 100%;
+  height: 133px;
+  overflow: hidden;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+}
+.skillset-section .info figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.skillset-section .info h2 {
+  margin-bottom: 16px;
+}
+.skillset-section .skills {
+  width: calc(100% - 32.87037037037037%);
+}
+@media screen and (max-width: 575px) {
+  .skillset-section .skills {
+    width: 100% !important;
+  }
+}
+.skillset-section .skills .card-row {
+  margin-top: 0;
+  margin-left: -14px;
+  margin-right: -14px;
+}
+.skillset-section .skills .card-row .card {
+  width: calc(100% / 3 - 28px);
+  margin: 32px 14px 0;
+  padding: 56px 30px 47px;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+}
+@media screen and (max-width: 480px) {
+  .skillset-section .skills .card-row .card {
+    width: 100% !important;
+  }
+}
+.skillset-section .skills .card-row .card figure {
+  margin-bottom: 26px;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(97.3deg, #221f57 -25.36%, #5b2a85 23.23%, #a22886 62.23%, #eb2770 106.03%);
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+}
+@media screen and (max-width: 991px) {
+  .skillset-section .skills .card-row .card {
+    width: calc(100% / 2 - 28px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .skillset-section .skills .info,
+.skillset-section .skills .skills {
+    width: 100% !important;
+    padding-right: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

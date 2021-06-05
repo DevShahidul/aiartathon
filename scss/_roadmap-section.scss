@@ -1,6 +1,7 @@
 .roadmap-section {
    margin-top: 126px;
    padding-top: 197px;
+   padding-bottom: 146px;
    background: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
    border-radius: 54px;
    -webkit-clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
@@ -9,10 +10,12 @@
    @media screen and (max-width: 991px) {
       margin-top: 100px;
       padding-top: 130px;
+      padding-bottom: 100px;
    }
    @media screen and (max-width: 767px) {
       margin-top: 60px;
       padding-top: 50px;
+      padding-bottom: 0;
       -webkit-clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
       clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
    }
