@@ -120,3 +120,15 @@ section {
       max-width: 100% !important;
    }
 }
+
+.web-line {
+   &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0px;
+      max-width: 100%;
+      z-index: -1;
+      @include background-property;
+   }
+}

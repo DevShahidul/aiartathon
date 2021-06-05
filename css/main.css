@@ -243,6 +243,19 @@ section::before, section::after {
   max-width: 100% !important;
 }
 
+.web-line::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0px;
+  max-width: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100%;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   background: 0 0;
@@ -1027,6 +1040,152 @@ section::before, section::after {
   display: block;
   margin: 68px auto 0;
   max-width: 157px;
+}
+@media screen and (max-width: 767px) {
+  .program-phases-section .btn {
+    margin-top: 30px;
+  }
+}
+
+.roadmap-section {
+  margin-top: 126px;
+  padding-top: 197px;
+  background: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
+  border-radius: 54px;
+  -webkit-clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
+}
+@media screen and (max-width: 991px) {
+  .roadmap-section {
+    margin-top: 100px;
+    padding-top: 130px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .roadmap-section {
+    margin-top: 60px;
+    padding-top: 50px;
+    -webkit-clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
+  }
+}
+.roadmap-section .container {
+  width: 1274px;
+}
+.roadmap-section .contents-row {
+  margin-top: 83px;
+}
+@media screen and (max-width: 991px) {
+  .roadmap-section .contents-row {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .roadmap-section .contents-row {
+    margin-top: 0px;
+  }
+}
+.roadmap-section .contents-row .figure {
+  width: 45.2299829642%;
+  margin-top: 147px;
+}
+@media screen and (max-width: 991px) {
+  .roadmap-section .contents-row .figure {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .roadmap-section .contents-row .figure {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .roadmap-section .contents-row .figure {
+    max-width: 253px;
+    margin: 30px auto 0;
+  }
+}
+.roadmap-section .contents-row .content {
+  width: calc(100% - 45.22998296422487%);
+  padding-left: 66px;
+}
+@media screen and (max-width: 767px) {
+  .roadmap-section .contents-row .content {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .roadmap-section .contents-row .content {
+    padding-left: 0px;
+    padding-top: 0;
+  }
+}
+.roadmap-section .contents-row .content-item {
+  margin-top: 34px;
+}
+.roadmap-section .contents-row .content-item h4,
+.roadmap-section .contents-row .content-item ul {
+  padding-left: 72px;
+  position: relative;
+}
+.roadmap-section .contents-row .content-item h4::before,
+.roadmap-section .contents-row .content-item ul::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+@media screen and (max-width: 991px) {
+  .roadmap-section .contents-row .content-item h4,
+.roadmap-section .contents-row .content-item ul {
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .roadmap-section .contents-row .content-item h4,
+.roadmap-section .contents-row .content-item ul {
+    padding-left: 40px;
+  }
+}
+.roadmap-section .contents-row .content-item h4 {
+  margin-bottom: 16px;
+}
+.roadmap-section .contents-row .content-item h4::before {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #262262;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+@media screen and (max-width: 767px) {
+  .roadmap-section .contents-row .content-item h4::before {
+    width: 12px;
+    height: 12px;
+    top: 8px;
+  }
+}
+.roadmap-section .contents-row .content-item ul::before {
+  width: 1px;
+  top: -2px;
+  bottom: -15px;
+  left: 9px;
+  border-left: 2px dashed #262262;
+  opacity: 0.3;
+}
+@media screen and (max-width: 767px) {
+  .roadmap-section .contents-row .content-item ul::before {
+    left: 6px;
+  }
+}
+.roadmap-section .contents-row .content-item ul li {
+  line-height: 30px;
+}
+.roadmap-section .contents-row .content-item ul li + li {
+  margin-top: 4px;
+}
+.roadmap-section .contents-row .content-item:last-child ul::before {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

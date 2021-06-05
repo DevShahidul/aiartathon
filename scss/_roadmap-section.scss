@@ -1,0 +1,116 @@
+.roadmap-section {
+   margin-top: 126px;
+   padding-top: 197px;
+   background: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
+   border-radius: 54px;
+   -webkit-clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
+   clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
+   //transform: matrix(-1, 0, 0, 1, 0, 0);
+   @media screen and (max-width: 991px) {
+      margin-top: 100px;
+      padding-top: 130px;
+   }
+   @media screen and (max-width: 767px) {
+      margin-top: 60px;
+      padding-top: 50px;
+      -webkit-clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
+   }
+   .container {
+      width: 1274px;
+   }
+   .contents-row {
+      margin-top: 83px;
+      @media screen and (max-width: 991px) {
+         margin-top: 50px;
+      }
+      @media screen and (max-width: 767px) {
+         margin-top: 0px;
+      }
+      .figure {
+         width: 45.22998296422487%;
+         margin-top: 147px;
+         @media screen and (max-width: 991px) {
+            margin-top: 100px;
+         }
+         @media screen and (max-width: 767px) {
+            margin-top: 70px;
+         }
+         @media screen and (max-width: 575px) {
+            max-width: 253px;
+            margin: 30px auto 0;
+         }
+      }
+      .content {
+         width: calc(100% - 45.22998296422487%);
+         padding-left: 66px;
+         @media screen and (max-width: 767px) {
+            padding-left: 30px;
+         }
+         @media screen and (max-width: 575px) {
+            padding-left: 0px;
+            padding-top: 0;
+         }
+      }
+      .content-item {
+         margin-top: 34px;
+         h4,
+         ul {
+            padding-left: 72px;
+            position: relative;
+            &::before {
+               content: "";
+               position: absolute;
+               left: 0;
+               top: 10px;
+            }
+            @media screen and (max-width: 991px) {
+               padding-left: 50px;
+            }
+            @media screen and (max-width: 767px) {
+               padding-left: 40px;
+            }
+         }
+         h4 {
+            margin-bottom: 16px;
+            &::before {
+               width: 18px;
+               height: 18px;
+               border: 1.5px solid $primary;
+               @include border-radius(50px);
+               @media screen and (max-width: 767px) {
+                  width: 12px;
+                  height: 12px;
+                  top: 8px;
+               }
+            }
+         }
+         ul {
+            &::before {
+               width: 1px;
+               top: -2px;
+               bottom: -15px;
+               left: 9px;
+               border-left: 2px dashed $primary;
+               opacity: 0.3;
+               @media screen and (max-width: 767px) {
+                  left: 6px;
+               }
+            }
+            li {
+               line-height: 30px;
+               & + li {
+                  margin-top: 4px;
+               }
+            }
+         }
+         &:last-child {
+            ul {
+               &::before {
+                  display: none;
+               }
+            }
+         }
+      }
+   }
+}
