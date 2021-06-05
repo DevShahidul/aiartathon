@@ -28,6 +28,10 @@ p {
    -webkit-text-fill-color: transparent;
 }
 
+.gradient-bg {
+   background: $primary-gradient !important;
+}
+
 ::selection {
    background-color: $pink;
    color: #fff;

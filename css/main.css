@@ -134,6 +134,10 @@ p {
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-bg {
+  background: linear-gradient(97.3deg, #221f57 -25.36%, #5b2a85 23.23%, #a22886 62.23%, #eb2770 106.03%) !important;
+}
+
 ::selection {
   background-color: #eb2770;
   color: #fff;
@@ -287,6 +291,9 @@ section::before, section::after {
   .btn {
     padding: 12px 25px;
   }
+}
+.btn.gradient-bg {
+  color: #ffffff;
 }
 
 .main-header {
@@ -762,9 +769,37 @@ section::before, section::after {
   -moz-border-radius: 54px;
   border-radius: 54px;
 }
+@media screen and (max-width: 767px) {
+  .who-should-apply-section {
+    padding-top: 100px;
+    -webkit-clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .who-should-apply-section {
+    -webkit-clip-path: polygon(0 0, 100% 25px, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 25px, 100% 100%, 0 100%);
+  }
+}
 .who-should-apply-section .container {
   width: 1307px;
   flex-flow: row wrap;
+  position: relative;
+}
+.who-should-apply-section .container::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #5b2a85;
+  position: absolute;
+  top: -52px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
 }
 .who-should-apply-section .contents {
   margin-right: -40px;
@@ -800,6 +835,7 @@ section::before, section::after {
 .who-should-apply-section .options-col .option-wrap {
   padding-right: 10%;
   width: 50%;
+  position: relative;
 }
 .who-should-apply-section .options-col .option-wrap + .option-wrap {
   padding-right: 20px;
@@ -807,6 +843,18 @@ section::before, section::after {
 }
 .who-should-apply-section .options-col .option-wrap:first-child {
   padding-left: 40px;
+}
+.who-should-apply-section .options-col .option-wrap:first-child::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #eb2770;
+  position: absolute;
+  top: 20%;
+  right: 25%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
 }
 @media screen and (max-width: 575px) {
   .who-should-apply-section .options-col .option-wrap {
@@ -856,7 +904,7 @@ section::before, section::after {
 }
 .who-should-apply-section .options-col .option-wrap figure::after {
   content: "";
-  background: #ffffff;
+  background: #f9fafd;
   position: absolute;
   left: 1px;
   top: 1px;
@@ -906,6 +954,79 @@ section::before, section::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.program-phases-section {
+  margin-top: 183px;
+}
+@media screen and (max-width: 991px) {
+  .program-phases-section {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .program-phases-section {
+    margin-top: 70px;
+  }
+}
+.program-phases-section .section-lead h2 {
+  margin-bottom: 26px;
+}
+.program-phases-section .card-row {
+  margin-top: 26px;
+  margin-left: -14px;
+  margin-right: -14px;
+  flex-flow: row wrap;
+}
+.program-phases-section .card-row .card {
+  margin: 28px 14px 0;
+  width: calc(100% / 3 - 28px);
+  padding: 73px 30px 50px;
+  background-color: #f9fafd;
+  text-align: center;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  border-radius: 34px;
+}
+.program-phases-section .card-row .card h3,
+.program-phases-section .card-row .card h6 {
+  margin-bottom: 34px;
+  text-transform: uppercase;
+}
+.program-phases-section .card-row .card h6 {
+  margin-bottom: 32px;
+}
+.program-phases-section .card-row .card span {
+  font-size: 74px;
+  line-height: 111px;
+  font-weight: 600;
+}
+.program-phases-section .card-row .card p {
+  max-width: 205px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 991px) {
+  .program-phases-section .card-row .card {
+    padding: 50px 15px 30px;
+  }
+  .program-phases-section .card-row .card h3,
+.program-phases-section .card-row .card h6 {
+    margin-bottom: 20px;
+  }
+  .program-phases-section .card-row .card span {
+    font-size: 50px;
+    line-height: 85px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .program-phases-section .card-row .card {
+    width: 100%;
+  }
+}
+.program-phases-section .btn {
+  display: block;
+  margin: 68px auto 0;
+  max-width: 157px;
 }
 
 /*# sourceMappingURL=main.css.map */
