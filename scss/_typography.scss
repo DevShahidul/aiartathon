@@ -5,11 +5,13 @@ h5,
 h6 {
   font-family: $default-font;
   font-weight: $medium-font-weight;
+  color: $primary-transparent;
 }
 h2 {
   font-size: $heading2-fonts;
   line-height: $heading2-line-height;
   font-weight: $bold-font-weight;
+  letter-spacing: 0.01em;
 }
 h3 {
   font-size: $heading3-fonts;
@@ -46,6 +48,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+p {
+  letter-spacing: 0.02em;
+}
+
 @media screen and (max-width: 991px) {
   h2 {
     font-size: 36px;
@@ -56,7 +62,7 @@ body {
 @media screen and (max-width: 767px) {
   h2 {
     font-size: 30px;
-    line-height: 48px !important;
+    line-height: 38px !important;
   }
   h3 {
     font-size: 24px;

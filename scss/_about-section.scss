@@ -1,0 +1,52 @@
+.about-section {
+   margin-top: 174px !important;
+   position: relative;
+   @media screen and (max-width: 991px) {
+      margin-top: 100px !important;
+   }
+   @media screen and (max-width: 767px) {
+      margin-top: 70px !important;
+   }
+   &::after {
+      content: "";
+      background-image: url(../images/weve-line-3.jpg);
+      width: 950px;
+      height: 1904px;
+      position: absolute;
+      right: 0;
+      top: -340px;
+      max-width: 100%;
+      z-index: -1;
+      @include background-property;
+   }
+   .container {
+      position: relative;
+      .spinner {
+         right: -45px;
+         top: -108px;
+      }
+   }
+   .figure {
+      width: 40.83333333333%;
+   }
+   .content {
+      padding-right: 80px;
+      width: calc(100% - 40.83333333333%);
+      h2 {
+         margin-bottom: 12px;
+      }
+      h5 {
+         padding-top: 30px;
+         margin-bottom: 16px;
+      }
+      p {
+         color: $black-light2;
+         max-width: 545px;
+      }
+   }
+   & > .spinner {
+      left: 50%;
+      margin-top: -16px;
+      @include transform(translateX(-50%));
+   }
+}

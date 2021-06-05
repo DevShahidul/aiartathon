@@ -1,9 +1,16 @@
 .hero-section {
    &::before {
-      content: url(../images/top-left-graphics-croped.png);
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
+      background-image: url(../images/weve-line-5.jpg);
+      width: 465px;
+      height: 1216px;
+      contain: content;
+      z-index: -1;
+      @include background-property;
+      background-position: left top;
    }
    .container {
       width: 1367px;
@@ -31,7 +38,9 @@
             width: 730px;
             max-width: 100%;
             text-align: center;
-            color: $white;
+            & > * {
+               color: $white;
+            }
             @media screen and (max-width: 991px) {
                width: 650px;
             }
