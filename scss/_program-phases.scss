@@ -1,5 +1,21 @@
 .program-phases-section {
    margin-top: 183px;
+   &.weve-line {
+      &::before {
+         left: 0;
+         top: -285px;
+         bottom: -280px;
+         background-image: url(../images/wave-line.jpg);
+         width: 550px;
+      }
+      &::after {
+         left: auto;
+         top: 50px;
+         bottom: -220px;
+         width: 455px;
+         background-image: url(../images/weve-line-4.jpg);
+      }
+   }
    @media screen and (max-width: 991px) {
       margin-top: 100px;
    }

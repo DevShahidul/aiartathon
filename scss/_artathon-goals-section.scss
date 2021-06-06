@@ -1,0 +1,92 @@
+.artathon-goals-section {
+   margin-top: 156px !important;
+   padding-top: 170px;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   @include border-radius(0 0 54px 54px);
+   @media screen and (max-width: 991px) {
+      margin-top: 80px !important;
+      padding-top: 100px;
+   }
+   @media screen and (max-width: 767px) {
+      margin-top: 50px !important;
+      @include border-radius(0 0 24px 24px);
+      &::before {
+         @include border-radius(24px);
+      }
+   }
+   &::before {
+      content: "";
+      left: 0;
+      top: 50px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      background: $secondary;
+      @include transform(skew(0deg, 3deg));
+      @include border-radius(54px);
+   }
+   .container {
+      width: 1262px;
+      .figure {
+         padding-right: 32px;
+         padding-left: 70px;
+         @media screen and (max-width: 1200px) {
+            padding-right: 0;
+            padding-left: 25px;
+         }
+         @media screen and (max-width: 575px) {
+            padding-left: 0px;
+         }
+         h2 {
+            margin-bottom: 34px;
+         }
+         .thumb {
+            margin-bottom: 34px;
+            @include border-radius(44px);
+            overflow: hidden;
+         }
+         h4 {
+            margin-bottom: 24px;
+         }
+      }
+      .content {
+         padding-right: 10px;
+         .goal-item {
+            padding: 38px 31px;
+            background: $white;
+            flex-flow: row wrap;
+            @include border-radius(34px);
+            & + .goal-item {
+               margin-top: 34px;
+            }
+            .icon {
+               margin-right: 36px;
+               &::after {
+                  background: $white;
+               }
+               @media screen and (max-width: 991px) {
+                  margin-right: 0;
+                  margin-bottom: 24px;
+               }
+            }
+            .description {
+               width: calc(100% - 110px);
+               h4 {
+                  margin-bottom: 14px;
+               }
+               @media screen and (max-width: 991px) {
+                  width: 100%;
+               }
+            }
+         }
+      }
+      .spinner {
+         right: 0px;
+         bottom: 5%;
+      }
+   }
+}

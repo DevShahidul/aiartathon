@@ -1,0 +1,98 @@
+.registration-section {
+   margin-top: 156px;
+   position: relative;
+   .container {
+      width: 1314px;
+   }
+   h2 {
+      margin-bottom: 26px;
+   }
+   .figure,
+   .content {
+      padding-left: 67px;
+      width: 50%;
+   }
+
+   @media screen and (max-width: 1200px) {
+      .figure,
+      .content {
+         padding-left: 0;
+      }
+      .content {
+         padding-right: 25px;
+      }
+   }
+   .figure {
+      img {
+         width: 524px;
+      }
+   }
+   .contents-row {
+      position: relative;
+      .spinner {
+         left: 50%;
+         bottom: -130px;
+         @include transform(translateX(-50%));
+      }
+   }
+   .card-row {
+      max-width: 1080px;
+      margin: 110px auto 0;
+      @media screen and (max-width: 767px) {
+         margin-top: 0px;
+      }
+      .card-item {
+         margin: 40px 0px 0;
+         width: calc(100% / 3 - 26.66666666666667px);
+         background: $secondary;
+         @include border-radius(34px);
+         @include flex(center);
+         &:last-child {
+            h2 {
+               font-size: 34px;
+               line-height: 51px;
+               @media screen and (max-width: 991px) {
+                  font-size: 27px;
+               }
+            }
+         }
+         & + .card-item {
+            margin-left: 40px;
+         }
+         .card {
+            width: 100%;
+            padding: 55px;
+            margin: 0;
+            background: transparent;
+            @media screen and (max-width: 991px) {
+               padding: 35px 25px;
+            }
+            h2 {
+               margin-bottom: 0;
+            }
+         }
+         @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-left: 0 !important;
+            background: transparent;
+            .card {
+               width: 333px;
+               max-width: 100%;
+               margin: 0 auto;
+               clear: both;
+               padding: 50px;
+               background: $secondary;
+            }
+         }
+      }
+   }
+   &.weve-line {
+      &::before {
+         width: 285px;
+         height: 1485px;
+         left: 0;
+         top: 95px;
+         background-image: url(../images/weve-line-2.jpg);
+      }
+   }
+}

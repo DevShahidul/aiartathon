@@ -1,10 +1,15 @@
 .track-section {
    margin-top: 160px !important;
+   position: relative;
    @media screen and (max-width: 991px) {
       margin-top: 100px !important;
    }
    @media screen and (max-width: 767px) {
       margin-top: 50px !important;
+   }
+   .spinner {
+      left: 0;
+      margin-top: 5%;
    }
 }
 .card-row {

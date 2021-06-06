@@ -2,11 +2,27 @@
    margin-top: 126px;
    padding-top: 197px;
    padding-bottom: 146px;
-   background: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
-   border-radius: 54px;
-   -webkit-clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
-   clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
+   //background: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
+   @include border-radius(0 0 54px 54px);
+   // -webkit-clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
+   // clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
    //transform: matrix(-1, 0, 0, 1, 0, 0);
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+   &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50px;
+      width: 100%;
+      height: 101%;
+      background: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
+      @include transform(skew(0deg, -3deg));
+      @include border-radius(54px);
+      overflow: hidden;
+      z-index: -1;
+   }
    @media screen and (max-width: 991px) {
       margin-top: 100px;
       padding-top: 130px;
@@ -14,13 +30,24 @@
    }
    @media screen and (max-width: 767px) {
       margin-top: 60px;
-      padding-top: 50px;
+      padding-top: 80px;
       padding-bottom: 0;
-      -webkit-clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
-      clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
+      @include border-radius(0 0 24px 24px);
+      // -webkit-clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
+      // clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
    }
    .container {
       width: 1274px;
+   }
+   .section-lead {
+      position: relative;
+      .spinner {
+         top: -30%;
+         &:last-child {
+            right: 0;
+            top: -55%;
+         }
+      }
    }
    .contents-row {
       margin-top: 83px;
@@ -30,9 +57,15 @@
       @media screen and (max-width: 767px) {
          margin-top: 0px;
       }
+      & > .spinner {
+         left: 5%;
+         bottom: 10%;
+         top: auto;
+      }
       .figure {
          width: 45.22998296422487%;
          margin-top: 147px;
+         position: relative;
          @media screen and (max-width: 991px) {
             margin-top: 100px;
          }
@@ -42,6 +75,11 @@
          @media screen and (max-width: 575px) {
             max-width: 253px;
             margin: 30px auto 0;
+         }
+         & > .spinner {
+            right: 0;
+            top: 5%;
+            bottom: auto;
          }
       }
       .content {
