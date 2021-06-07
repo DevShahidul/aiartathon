@@ -2689,20 +2689,31 @@ main.main {
     width: 650px;
   }
 }
-.hero-section .container .contents-wrap .contents .count-down {
+.hero-section .container .contents-wrap .contents .countdown {
   margin-top: 60px;
   color: rgba(255, 255, 255, 0.8);
   font-size: 34px;
   line-height: 45px;
   font-weight: 500;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 1024px) {
-  .hero-section .container .contents-wrap .contents .count-down {
+  .hero-section .container .contents-wrap .contents .countdown {
     margin-top: 30px;
   }
 }
 @media screen and (max-width: 767px) {
-  .hero-section .container .contents-wrap .contents .count-down {
+  .hero-section .container .contents-wrap .contents .countdown {
     margin-top: 0;
   }
 }
@@ -3942,21 +3953,32 @@ main.main {
   -moz-border-radius: 34px;
   border-radius: 34px;
 }
+@media screen and (max-width: 320px) {
+  .main-footer .contents-row .countdown-wrap {
+    padding: 30px 20px 16px;
+  }
+}
 .main-footer .contents-row .countdown-wrap h6 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 4px;
 }
 .main-footer .contents-row .countdown-wrap .countdown {
-  font-size: 64px;
+  font-size: 38px;
   font-weight: 500;
   line-height: 96px;
+}
+.main-footer .contents-row .countdown-wrap .countdown span {
+  display: inline-block;
+  margin: 0 17px;
+}
+@media screen and (max-width: 991px) {
+  .main-footer .contents-row .countdown-wrap .countdown span {
+    margin: 0 10px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .main-footer .contents-row .countdown-wrap {
     margin-right: 0;
-  }
-  .main-footer .contents-row .countdown-wrap .countdown {
-    font-size: 5vw;
   }
 }
 @media screen and (max-width: 767px) {

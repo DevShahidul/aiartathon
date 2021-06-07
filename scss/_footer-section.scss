@@ -91,20 +91,27 @@
          background: $white-light1;
          padding: 38px 47px 24px;
          @include border-radius(34px);
+         @media screen and (max-width: 320px) {
+            padding: 30px 20px 16px;
+         }
          h6 {
             color: $white-light6;
             margin-bottom: 4px;
          }
          .countdown {
-            font-size: 64px;
+            font-size: 38px;
             font-weight: $medium-font-weight;
             line-height: 96px;
+            span {
+               display: inline-block;
+               margin: 0 17px;
+               @media screen and (max-width: 991px) {
+                  margin: 0 10px;
+               }
+            }
          }
          @media screen and (max-width: 1200px) {
             margin-right: 0;
-            .countdown {
-               font-size: 5vw;
-            }
          }
          @media screen and (max-width: 767px) {
             margin-left: 0;

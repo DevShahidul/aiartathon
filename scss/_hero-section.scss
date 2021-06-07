@@ -60,12 +60,13 @@
             @media screen and (max-width: 991px) {
                width: 650px;
             }
-            .count-down {
+            .countdown {
                margin-top: 60px;
                color: $white-light;
                font-size: 34px;
                line-height: 45px;
                font-weight: $medium-font-weight;
+               @include flex(center);
                @media screen and (max-width: 1024px) {
                   margin-top: 30px;
                }
