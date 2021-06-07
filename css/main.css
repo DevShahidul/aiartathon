@@ -2144,6 +2144,11 @@ p {
   top: -55%;
   margin-right: 0;
 }
+@media screen and (max-width: 767px) {
+  .section-lead .spinner:last-child {
+    display: none;
+  }
+}
 
 .contents-row .figure,
 .contents-row .content {
@@ -2429,6 +2434,7 @@ main.main {
     max-width: 100%;
     width: 100%;
     margin-right: 0;
+    margin-left: 0;
   }
   .main-header .logo-wrap .logo {
     max-width: 120px;
@@ -2640,6 +2646,11 @@ main.main {
   top: 0;
   right: -86px;
   z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .hero-section .container .contents-wrap::before, .hero-section .container .contents-wrap::after {
+    display: none;
+  }
 }
 .hero-section .container .contents-wrap::after {
   right: auto;
@@ -3232,11 +3243,23 @@ main.main {
   top: 5%;
   bottom: auto;
 }
+@media screen and (max-width: 767px) {
+  .roadmap-section .contents-row .figure > .spinner {
+    right: -15%;
+    top: -4%;
+  }
+}
 .roadmap-section .contents-row .figure > .spinner:last-child {
   right: auto;
-  left: -16%;
   top: auto;
+  left: -16%;
   bottom: 34%;
+}
+@media screen and (max-width: 767px) {
+  .roadmap-section .contents-row .figure > .spinner:last-child {
+    left: -30%;
+    bottom: 3%;
+  }
 }
 .roadmap-section .contents-row .content {
   width: calc(100% - 45.22998296422487%);
@@ -3729,9 +3752,17 @@ main.main {
   position: relative;
 }
 .faq-section .container .spinner {
-  right: 15%;
   left: auto;
+  right: 15%;
   bottom: -15%;
+}
+@media screen and (max-width: 767px) {
+  .faq-section .container .spinner {
+    left: 15%;
+    top: -15%;
+    bottom: auto;
+    right: auto;
+  }
 }
 @media screen and (max-width: 991px) {
   .faq-section {

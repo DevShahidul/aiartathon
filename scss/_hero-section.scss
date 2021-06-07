@@ -31,6 +31,9 @@
             top: 0;
             right: -86px;
             z-index: -1;
+            @media screen and (max-width: 767px) {
+               display: none;
+            }
          }
          &::after {
             right: auto;

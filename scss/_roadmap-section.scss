@@ -69,11 +69,19 @@
             right: 0;
             top: 5%;
             bottom: auto;
+            @media screen and (max-width: 767px) {
+               right: -15%;
+               top: -4%;
+            }
             &:last-child {
                right: auto;
-               left: -16%;
                top: auto;
+               left: -16%;
                bottom: 34%;
+               @media screen and (max-width: 767px) {
+                  left: -30%;
+                  bottom: 3%;
+               }
             }
          }
       }
