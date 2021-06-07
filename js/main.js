@@ -47,8 +47,10 @@
          $(".nav-toggler").removeClass('expanded');
          $("div.nav-wrap").removeClass('expanded');
          $('body').removeClass('no-scroll');
+         $('.nav-wrap ul li a').removeClass('active');
+         $(this).addClass('active');
          $root.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
+            scrollTop: $($.attr(this, 'href')).offset().top - 50
          }, 500);
 
          return false;

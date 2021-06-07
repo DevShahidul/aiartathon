@@ -2562,9 +2562,34 @@ main.main {
   color: rgba(0, 0, 0, 0.8);
   font-weight: 500;
   text-transform: capitalize;
+  position: relative;
 }
-.nav-wrap ul li a:hover {
+.nav-wrap ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  /* defining prefixes so we can use them in mixins below*/
+  -webkit-transition: width 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  -ms-transition: width 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  -o-transition: width 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  -transition: width 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  transition: width 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  bottom: -10px;
+  width: 0;
+  height: 3px;
+  border-radius: 7px;
+  background: linear-gradient(97.3deg, #221f57 -25.36%, #5b2a85 23.23%, #a22886 62.23%, #eb2770 106.03%);
+}
+.nav-wrap ul li a.active, .nav-wrap ul li a:hover {
   color: #000000;
+}
+.nav-wrap ul li a.active::after, .nav-wrap ul li a:hover::after {
+  width: 90%;
 }
 @media screen and (max-width: 991px) {
   .nav-wrap {
@@ -2626,6 +2651,9 @@ main.main {
   }
   .nav-wrap .nav ul li a {
     padding: 5px;
+  }
+  .nav-wrap .nav ul li a::after {
+    bottom: -3px;
   }
 }
 @media screen and (max-width: 767px) {

@@ -11,8 +11,25 @@
             color: $black-light;
             font-weight: $medium-font-weight;
             text-transform: capitalize;
+            position: relative;
+            &::after {
+               content: "";
+               position: absolute;
+               left: 50%;
+               @include transform(translateX(-50%));
+               @include transition(width 0.6s cubic-bezier(0.83, 0, 0.17, 1));
+               bottom: -10px;
+               width: 0;
+               height: 3px;
+               border-radius: 7px;
+               background: $primary-gradient;
+            }
+            &.active,
             &:hover {
                color: $black;
+               &::after {
+                  width: 90%;
+               }
             }
          }
       }
@@ -54,6 +71,9 @@
                }
                a {
                   padding: 5px;
+                  &::after {
+                     bottom: -3px;
+                  }
                }
             }
          }
