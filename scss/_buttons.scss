@@ -11,6 +11,7 @@
    font-weight: $semibold-font-weight;
    letter-spacing: 0.01em;
    white-space: nowrap;
+   text-align: center;
    @include transition(opacity 0.3s ease-in);
    &:hover {
       opacity: 0.8;

@@ -2355,6 +2355,7 @@ main.main {
   font-weight: 600;
   letter-spacing: 0.01em;
   white-space: nowrap;
+  text-align: center;
   /* defining prefixes so we can use them in mixins below*/
   -webkit-transition: opacity 0.3s ease-in;
   -ms-transition: opacity 0.3s ease-in;
