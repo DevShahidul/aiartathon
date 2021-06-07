@@ -60,6 +60,18 @@
    }
 }
 
+[data-aos="animation-skew-x-r"] {
+   @include transform(translateX(100px) skewX(20deg));
+   opacity: 0;
+}
+
+[data-aos="animation-skew-x-r"] {
+   &.aos-animate {
+      @include transform(translateX(0) skewX(0deg));
+      opacity: 1;
+   }
+}
+
 .spinner {
    animation-name: spin;
    animation-duration: 8s;

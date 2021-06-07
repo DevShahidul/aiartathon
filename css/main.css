@@ -1993,6 +1993,24 @@ p {
   opacity: 1;
 }
 
+[data-aos=animation-skew-x-r] {
+  -moz-transform: translateX(100px) skewX(20deg);
+  -o-transform: translateX(100px) skewX(20deg);
+  -ms-transform: translateX(100px) skewX(20deg);
+  -webkit-transform: translateX(100px) skewX(20deg);
+  transform: translateX(100px) skewX(20deg);
+  opacity: 0;
+}
+
+[data-aos=animation-skew-x-r].aos-animate {
+  -moz-transform: translateX(0) skewX(0deg);
+  -o-transform: translateX(0) skewX(0deg);
+  -ms-transform: translateX(0) skewX(0deg);
+  -webkit-transform: translateX(0) skewX(0deg);
+  transform: translateX(0) skewX(0deg);
+  opacity: 1;
+}
+
 .spinner {
   animation-name: spin;
   animation-duration: 8s;
