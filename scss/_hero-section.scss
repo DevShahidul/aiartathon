@@ -18,18 +18,26 @@
          position: relative;
          overflow: hidden;
          z-index: 1;
-         padding: 50px;
+         padding: 104px 50px;
          min-height: 647px;
          background-image: url(../images/hero-image.jpg);
          @include background-property;
          @include border-radius(54px);
          @include flex(center);
-         &::before {
+         &::before,
+         &::after {
             content: url(../images/hero-overlay.png);
             position: absolute;
             top: 0;
             right: -86px;
             z-index: -1;
+         }
+         &::after {
+            right: auto;
+            left: -78px;
+            top: auto;
+            bottom: 0;
+            @include transform(rotate(180deg));
          }
          @media screen and (max-width: 1024px) {
             min-height: 300px;
@@ -45,7 +53,7 @@
                width: 650px;
             }
             .count-down {
-               margin-top: 59px;
+               margin-top: 60px;
                color: $white-light;
                font-size: 34px;
                line-height: 45px;
@@ -61,6 +69,7 @@
                line-height: 64px;
                letter-spacing: 0.01em;
                margin-bottom: 28px;
+               font-weight: $semibold-font-weight;
                @media screen and (max-width: 767px) {
                   margin-bottom: 15px;
                }
@@ -74,11 +83,11 @@
             }
             p {
                letter-spacing: 0.01em;
-               font-weight: $small-fnts;
+               font-size: $small-fnts;
                text-transform: uppercase;
             }
             .btn {
-               margin-top: 54px;
+               margin-top: 50px;
                @media screen and (max-width: 767px) {
                   margin-top: 30px;
                }

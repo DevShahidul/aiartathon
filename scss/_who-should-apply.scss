@@ -1,14 +1,14 @@
 .who-should-apply-section {
-   margin-top: 206px;
+   margin-top: 180px;
    padding-top: 160px;
    &::after {
-      @include transform(skew(0deg, 3deg));
+      @include transform(skew(0deg, 4deg));
    }
    @media screen and (max-width: 767px) {
       padding-top: 100px;
    }
    .container {
-      width: 1307px;
+      width: 1258px;
       flex-flow: row wrap;
       position: relative;
       &::before {
@@ -25,7 +25,7 @@
       margin-right: -40px;
    }
    .options-container {
-      width: calc(100% - 46.33928571428571%);
+      width: calc(100% - 44.81865284974093%);
       @media screen and (max-width: 991px) {
          width: 100%;
       }
@@ -81,7 +81,7 @@
          }
          h4 {
             margin-top: 30px;
-            margin-bottom: 8px;
+            margin-bottom: 20px;
          }
          ul {
             li {
@@ -93,16 +93,17 @@
       }
    }
    .description-col {
-      width: 46.33928571428571%;
+      width: 44.81865284974093%;
       background-color: $white;
-      padding: 50px 43px 0;
+      padding: 50px 41px 0 46px;
       @include border-radius(34px);
       @media screen and (max-width: 991px) {
          width: 100%;
          margin-top: 50px;
       }
       h2 {
-         margin-bottom: 16px;
+         margin-bottom: 23px;
+         letter-spacing: 0;
       }
       figure {
          width: 100%;

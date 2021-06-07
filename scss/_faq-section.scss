@@ -1,12 +1,15 @@
 .faq-section {
-   margin-top: 140px !important;
+   margin-top: 71px !important;
+   padding-top: 71px;
    position: relative;
    &.weve-line {
       &::before {
          background-image: url(../images/weve-line-1.jpg);
+         background-position: top;
+         background-repeat: no-repeat;
          left: auto;
          right: 0;
-         top: -25px;
+         top: 32px;
          width: 390px;
          min-height: 850px;
       }
@@ -20,7 +23,8 @@
       }
    }
    @media screen and (max-width: 991px) {
-      margin-top: 80px !important;
+      margin-top: 0px !important;
+      padding-top: 80px;
    }
    @media screen and (max-width: 767px) {
       margin-top: 50px !important;
@@ -31,7 +35,7 @@
    }
    .item-row {
       width: 100%;
-      padding: 15px 27px;
+      padding: 17px 27px 16px;
       cursor: pointer;
       @include border-radius(12px);
       &:nth-child(odd) {
@@ -40,6 +44,7 @@
       color: $black-light3;
       h6 {
          color: $black-light3;
+         letter-spacing: 0.02em;
       }
       .ans {
          display: none;

@@ -178,6 +178,7 @@ main.main {
       li {
          position: relative;
          padding-left: 30px;
+         letter-spacing: 0.02em;
          &::before {
             content: "";
             width: 10px;

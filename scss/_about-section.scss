@@ -1,5 +1,6 @@
 .about-section {
-   margin-top: 174px !important;
+   margin-top: 100px !important;
+   padding-top: 74px;
    position: relative;
    @media screen and (max-width: 991px) {
       margin-top: 100px !important;
@@ -11,7 +12,7 @@
       content: "";
       background-image: url(../images/weve-line-3.jpg);
       width: 950px;
-      height: 1904px;
+      height: 2015px;
       position: absolute;
       right: 0;
       top: -340px;
@@ -28,9 +29,14 @@
    }
    .figure {
       width: 40.83333333333%;
+      figure {
+         margin-right: -24px;
+         margin-left: 24px;
+      }
    }
    .content {
-      padding-right: 80px;
+      padding-top: 14px;
+      padding-right: 70px;
       width: calc(100% - 40.83333333333%);
       h2 {
          margin-bottom: 12px;
@@ -42,6 +48,15 @@
       p {
          color: $black-light2;
          max-width: 545px;
+         & + p {
+            margin-top: 30px;
+            margin-top: 25px;
+            font-size: 14px;
+            letter-spacing: 0;
+            a {
+               margin-left: 4px;
+            }
+         }
       }
    }
    & > .spinner {

@@ -1,6 +1,7 @@
 .main-footer {
-   margin-top: 135px;
+   margin-top: 140px;
    padding-top: 274px;
+   padding-bottom: 30px;
    z-index: 1;
    color: $white;
    position: relative;
@@ -8,6 +9,7 @@
    @media screen and (max-width: 991px) {
       padding-top: 174px;
       margin-top: 85px;
+      padding-bottom: 0;
    }
 
    @media screen and (max-width: 575px) {
@@ -22,7 +24,7 @@
       background: $primary;
       position: absolute;
       z-index: -2;
-      @include transform(skew(0deg, -3deg));
+      @include transform(skew(0deg, -4deg));
       @include border-radius(54px 54px 0 0);
       overflow: hidden;
       @media screen and (max-width: 767px) {
@@ -46,12 +48,13 @@
    }
    .contents-row {
       position: relative;
-      h2,
-      h6 {
-         color: $white;
-      }
       h2 {
          margin-bottom: 8px;
+         color: $white;
+      }
+      h6 {
+         color: $white-light;
+         font-weight: $default-font-weight;
       }
       a.btn {
          margin-top: 52px;

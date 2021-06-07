@@ -1,6 +1,6 @@
 .roadmap-section {
-   margin-top: 126px;
-   padding-top: 197px;
+   margin-top: 120px;
+   padding-top: 203px;
    padding-bottom: 146px;
    //background: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
    @include border-radius(0 0 54px 54px);
@@ -99,25 +99,29 @@
          ul {
             padding-left: 72px;
             position: relative;
+            max-width: 485px;
             &::before {
                content: "";
                position: absolute;
                left: 0;
-               top: 10px;
+               top: 50%;
+               margin-top: -7.5px;
             }
             @media screen and (max-width: 991px) {
                padding-left: 50px;
             }
             @media screen and (max-width: 767px) {
                padding-left: 40px;
+               max-width: 100%;
             }
          }
          h4 {
             margin-bottom: 16px;
+            font-weight: $semibold-font-weight;
             &::before {
-               width: 18px;
-               height: 18px;
-               border: 1.5px solid $primary;
+               width: 15px;
+               height: 15px;
+               border: 1.5px solid $black-light3;
                @include border-radius(50px);
                @media screen and (max-width: 767px) {
                   width: 12px;
@@ -129,10 +133,10 @@
          ul {
             &::before {
                width: 1px;
-               top: -2px;
-               bottom: -15px;
-               left: 9px;
-               border-left: 2px dashed $primary;
+               top: 5px;
+               bottom: -27px;
+               left: 7px;
+               border-left: 2px dashed $black-light3;
                opacity: 0.3;
                @media screen and (max-width: 767px) {
                   left: 6px;
@@ -140,6 +144,10 @@
             }
             li {
                line-height: 30px;
+               padding-left: 0;
+               &::before {
+                  display: none;
+               }
                & + li {
                   margin-top: 4px;
                }

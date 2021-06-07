@@ -1,15 +1,19 @@
 .skillset-section {
-   margin-top: 128px;
+   margin-top: 68px;
+   padding-top: 64px;
    position: relative;
    @media screen and (max-width: 991px) {
-      margin-top: 100px !important;
+      margin-top: 0px !important;
+      padding-top: 100px;
    }
 
    @media screen and (max-width: 767px) {
-      margin-top: 60px !important;
+      margin-top: 0px !important;
+      padding-top: 60px;
    }
    @media screen and (max-width: 575px) {
-      margin-top: 10px !important;
+      margin-top: 0px !important;
+      padding-top: 10px;
    }
    .container {
       flex-flow: row wrap;
@@ -47,16 +51,20 @@
          margin-top: 0;
          margin-left: -14px;
          margin-right: -14px;
+         padding-left: 15px;
+         @media screen and (max-width: 991px) {
+            padding-left: 0;
+         }
          .card {
             width: calc(100% / 3 - 28px);
             margin: 32px 14px 0;
-            padding: 56px 30px 47px;
+            padding: 56px 30px 37px;
             @include border-radius(28px);
             @media screen and (max-width: 480px) {
                width: 100% !important;
             }
             figure {
-               margin-bottom: 26px;
+               margin-bottom: 25px;
                width: 65px;
                height: 65px;
                background: $primary-gradient;
@@ -64,6 +72,9 @@
             }
             span {
                font-weight: $medium-font-weight;
+               line-height: 21px;
+               display: inline-block;
+               color: $black-light2;
             }
          }
       }

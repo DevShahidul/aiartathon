@@ -1,5 +1,5 @@
 .artathon-goals-section {
-   margin-top: 156px !important;
+   margin-top: 150px !important;
    padding-top: 170px;
    position: relative;
    z-index: 1;
@@ -26,7 +26,7 @@
       z-index: -1;
       overflow: hidden;
       background: $secondary;
-      @include transform(skew(0deg, 3deg));
+      @include transform(skew(0deg, 4deg));
       @include border-radius(54px);
    }
    .container {
@@ -76,7 +76,7 @@
             .description {
                width: calc(100% - 110px);
                h4 {
-                  margin-bottom: 14px;
+                  margin-bottom: 16px;
                }
                @media screen and (max-width: 991px) {
                   width: 100%;

@@ -5,10 +5,11 @@
    box-shadow: none;
    padding: 20px 28px;
    @include border-radius(12px);
-   font-size: $base-font-size;
+   font-size: $base-font-size - 1;
    line-height: 23px;
    font-family: $default-font;
-   font-weight: $default-font-weight;
+   font-weight: $semibold-font-weight;
+   letter-spacing: 0.01em;
    white-space: nowrap;
    @include transition(opacity 0.3s ease-in);
    &:hover {

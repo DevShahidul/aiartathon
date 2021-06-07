@@ -1,5 +1,5 @@
 .registration-section {
-   margin-top: 156px;
+   margin-top: 125px;
    position: relative;
    .container {
       width: 1314px;
@@ -11,6 +11,9 @@
    .content {
       padding-left: 67px;
       width: 50%;
+   }
+   .figure {
+      padding-left: 85px;
    }
 
    @media screen and (max-width: 1200px) {
@@ -70,6 +73,10 @@
             h2 {
                margin-bottom: 0;
             }
+            span {
+               display: inline-block;
+               letter-spacing: 0.02em;
+            }
          }
          @media screen and (max-width: 767px) {
             width: 100%;
@@ -89,10 +96,11 @@
    &.weve-line {
       &::before {
          width: 285px;
-         height: 1485px;
+         height: 1656px;
          left: 0;
-         top: 95px;
+         top: 50px;
          background-image: url(../images/weve-line-2.jpg);
+         background-position: top;
       }
    }
 }
