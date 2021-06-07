@@ -252,3 +252,7 @@ main.main {
       @include border-radius(23px);
    }
 }
+
+.countdown {
+   @include flex(center);
+}
