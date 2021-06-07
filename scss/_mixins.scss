@@ -79,3 +79,20 @@
   @include transform(translateX(-50%) translateY(-50%));
   text-align: center;
 }
+
+// Keyframe
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

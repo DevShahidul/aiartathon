@@ -1,0 +1,16 @@
+// use of keyframes mixin
+@include keyframes(spin) {
+   0% {
+      @include transform(rotate(0deg));
+   }
+   100% {
+      @include transform(rotate(360deg));
+   }
+}
+
+.spinner {
+   animation-name: spin;
+   animation-duration: 8s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
