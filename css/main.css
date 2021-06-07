@@ -3881,6 +3881,11 @@ main.main {
   margin-top: 0 !important;
   padding-right: 25px !important;
 }
+@media screen and (max-width: 991px) {
+  .main-footer .contents-row .content {
+    order: 1 !important;
+  }
+}
 @media screen and (max-width: 767px) {
   .main-footer .contents-row .content {
     width: 100% !important;
@@ -3937,6 +3942,11 @@ main.main {
 .main-footer .contents-row .spinner {
   left: -90px;
   bottom: -67px;
+}
+@media screen and (max-width: 991px) {
+  .main-footer .contents-row .spinner {
+    left: -15px;
+  }
 }
 @media screen and (max-width: 767px) {
   .main-footer .contents-row a.btn {

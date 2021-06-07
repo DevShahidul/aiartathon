@@ -28,6 +28,8 @@
       var $root = $('html, body');
 
       $('.nav-wrap ul li a[href^="#"]').click(function () {
+         $("#navToggler").removeClass('expanded');
+         $("div.nav-wrap").removeClass('expanded');
          $root.animate({
             scrollTop: $($.attr(this, 'href')).offset().top
          }, 500);

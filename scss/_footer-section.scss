@@ -68,6 +68,9 @@
          padding-right: 45px;
          margin-top: 0 !important;
          padding-right: 25px !important;
+         @media screen and (max-width: 991px) {
+            order: 1 !important;
+         }
          @media screen and (max-width: 767px) {
             width: 100% !important;
             margin-top: 50px !important;
@@ -115,6 +118,9 @@
       .spinner {
          left: -90px;
          bottom: -67px;
+         @media screen and (max-width: 991px) {
+            left: -15px;
+         }
       }
       @media screen and (max-width: 767px) {
          a.btn {
