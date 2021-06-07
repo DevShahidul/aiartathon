@@ -16,17 +16,18 @@
    }
    .container {
       flex-flow: row wrap;
-      .spinner {
-         top: -15%;
-         left: 0;
-         bottom: auto;
-         @include transform(translateX(0));
-      }
    }
    .info {
       width: 32.87037037037037%;
       padding-right: 30px;
       margin-top: 32px;
+      position: relative;
+      .spinner {
+         top: -35%;
+         left: -50%;
+         bottom: auto;
+         @include transform(translateX(0));
+      }
       @media screen and (max-width: 991px) {
          width: 100%;
          padding-right: 0;
@@ -98,9 +99,9 @@
       }
    }
    .spinner {
-      left: 50%;
+      left: 46%;
       top: auto;
-      bottom: -25%;
+      bottom: -26%;
       @include transform(translateX(-50%));
    }
 }

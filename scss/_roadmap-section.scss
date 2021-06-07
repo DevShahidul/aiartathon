@@ -38,16 +38,6 @@
    .container {
       width: 1274px;
    }
-   .section-lead {
-      position: relative;
-      .spinner {
-         top: -30%;
-         &:last-child {
-            right: 0;
-            top: -55%;
-         }
-      }
-   }
    .contents-row {
       margin-top: 83px;
       @media screen and (max-width: 991px) {
@@ -56,11 +46,11 @@
       @media screen and (max-width: 767px) {
          margin-top: 0px;
       }
-      & > .spinner {
-         left: 5%;
-         bottom: 10%;
-         top: auto;
-      }
+      // & > .spinner {
+      //    left: 4%;
+      //    bottom: 28%;
+      //    top: auto;
+      // }
       .figure {
          width: 45.22998296422487%;
          margin-top: 147px;
@@ -79,6 +69,12 @@
             right: 0;
             top: 5%;
             bottom: auto;
+            &:last-child {
+               right: auto;
+               left: 1%;
+               top: auto;
+               bottom: 8%;
+            }
          }
       }
       .content {

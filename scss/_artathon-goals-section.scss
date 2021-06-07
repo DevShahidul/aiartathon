@@ -34,6 +34,7 @@
       .figure {
          padding-right: 32px;
          padding-left: 70px;
+         position: relative;
          @media screen and (max-width: 1200px) {
             padding-right: 0;
             padding-left: 25px;
@@ -51,6 +52,10 @@
          }
          h4 {
             margin-bottom: 24px;
+         }
+         .spinner {
+            right: -22%;
+            bottom: 12%;
          }
       }
       .content {
@@ -83,10 +88,6 @@
                }
             }
          }
-      }
-      .spinner {
-         right: 0px;
-         bottom: 5%;
       }
    }
 }

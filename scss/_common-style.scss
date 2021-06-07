@@ -85,8 +85,18 @@ p {
    width: 857px;
    max-width: 100%;
    margin: 0 auto;
+   position: relative;
    h2 {
       margin-bottom: 16px;
+   }
+   .spinner {
+      top: -50%;
+      margin-left: 5%;
+      &:last-child {
+         right: 5%;
+         top: -55%;
+         margin-right: 0;
+      }
    }
 }
 

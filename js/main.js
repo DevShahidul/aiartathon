@@ -34,5 +34,8 @@
 
          return false;
       });
+
+      // AOS animation
+      AOS.init();
    })
 })(jQuery);
