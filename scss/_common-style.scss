@@ -97,6 +97,20 @@ p {
    }
    @media screen and (max-width: 991px) {
       flex-flow: row wrap;
+      .figure,
+      .content {
+         width: 100% !important;
+         padding-left: 0 !important;
+         padding-right: 0 !important;
+      }
+      .figure {
+         order: 1 !important;
+      }
+      .content {
+         order: 2 !important;
+         margin-top: 50px;
+         padding-top: 0 !important;
+      }
    }
    @media screen and (max-width: 575px) {
       .figure {
@@ -113,6 +127,26 @@ p {
          order: 2;
          padding-top: 50px;
          padding-right: 0 !important;
+      }
+   }
+   ul {
+      li {
+         position: relative;
+         padding-left: 30px;
+         letter-spacing: 0.02em;
+         &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            background-color: $primary-transparent2;
+            @include border-radius(50px);
+         }
+         & + li {
+            margin-top: 6px;
+         }
       }
    }
 }
@@ -171,29 +205,6 @@ section {
 
 main.main {
    overflow-x: hidden;
-}
-
-.contents-row {
-   ul {
-      li {
-         position: relative;
-         padding-left: 30px;
-         letter-spacing: 0.02em;
-         &::before {
-            content: "";
-            width: 10px;
-            height: 10px;
-            position: absolute;
-            left: 0;
-            top: 10px;
-            background-color: $primary-transparent2;
-            @include border-radius(50px);
-         }
-         & + li {
-            margin-top: 6px;
-         }
-      }
-   }
 }
 
 .gradient-border {

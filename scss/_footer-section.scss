@@ -62,10 +62,19 @@
       }
       .content,
       .figure {
-         width: 50%;
+         width: 50% !important;
       }
       .content {
          padding-right: 45px;
+         order: 1 !important;
+         margin-top: 0 !important;
+         padding-right: 25px !important;
+         @media screen and (max-width: 767px) {
+            width: 100% !important;
+            margin-top: 50px !important;
+            padding-right: 0 !important;
+            order: 2 !important;
+         }
       }
       .countdown-wrap {
          width: 406px;
@@ -111,7 +120,7 @@
          }
          .content,
          .figure {
-            width: 100%;
+            width: 100% !important;
          }
          .figure {
             order: 1;
@@ -130,6 +139,9 @@
          margin-left: auto;
          color: $white-light6;
          padding-left: 25px;
+      }
+      @media screen and (max-width: 991px) {
+         margin-top: 70px;
       }
       @media screen and (max-width: 767px) {
          margin-top: 50px;

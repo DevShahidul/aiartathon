@@ -6,7 +6,7 @@
       margin-top: 100px !important;
    }
    @media screen and (max-width: 767px) {
-      margin-top: 70px !important;
+      margin-top: 0px !important;
    }
    &::after {
       content: "";
@@ -19,6 +19,12 @@
       max-width: 100%;
       z-index: -1;
       @include background-property;
+      @media screen and (max-width: 1200px) {
+         height: 280%;
+      }
+      @media screen and (max-width: 991px) {
+         height: 325%;
+      }
    }
    .container {
       position: relative;
@@ -32,6 +38,10 @@
       figure {
          margin-right: -24px;
          margin-left: 24px;
+         @media screen and (max-width: 991px) {
+            margin-right: 0;
+            margin-left: 0;
+         }
       }
    }
    .content {

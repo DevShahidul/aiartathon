@@ -67,6 +67,10 @@ p {
     font-size: 36px;
     line-height: 48px !important;
   }
+
+  h3 {
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 767px) {
   h2 {
@@ -223,6 +227,20 @@ p {
   .contents-row {
     flex-flow: row wrap;
   }
+  .contents-row .figure,
+.contents-row .content {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .contents-row .figure {
+    order: 1 !important;
+  }
+  .contents-row .content {
+    order: 2 !important;
+    margin-top: 50px;
+    padding-top: 0 !important;
+  }
 }
 @media screen and (max-width: 575px) {
   .contents-row .figure {
@@ -239,6 +257,26 @@ p {
     padding-top: 50px;
     padding-right: 0 !important;
   }
+}
+.contents-row ul li {
+  position: relative;
+  padding-left: 30px;
+  letter-spacing: 0.02em;
+}
+.contents-row ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: rgba(38, 34, 98, 0.2);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+.contents-row ul li + li {
+  margin-top: 6px;
 }
 
 .curp-bg {
@@ -308,27 +346,6 @@ section::before, section::after {
 
 main.main {
   overflow-x: hidden;
-}
-
-.contents-row ul li {
-  position: relative;
-  padding-left: 30px;
-  letter-spacing: 0.02em;
-}
-.contents-row ul li::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  left: 0;
-  top: 10px;
-  background-color: rgba(38, 34, 98, 0.2);
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-}
-.contents-row ul li + li {
-  margin-top: 6px;
 }
 
 .gradient-border {
@@ -713,6 +730,14 @@ main.main {
     min-height: 300px;
   }
 }
+@media screen and (max-width: 767px) {
+  .hero-section .container .contents-wrap {
+    padding: 50px 25px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+  }
+}
 .hero-section .container .contents-wrap .contents {
   width: 730px;
   max-width: 100%;
@@ -789,7 +814,7 @@ main.main {
 }
 @media screen and (max-width: 767px) {
   .about-section {
-    margin-top: 70px !important;
+    margin-top: 0px !important;
   }
 }
 .about-section::after {
@@ -807,6 +832,16 @@ main.main {
   background-size: cover;
   min-height: 100%;
 }
+@media screen and (max-width: 1200px) {
+  .about-section::after {
+    height: 280%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .about-section::after {
+    height: 325%;
+  }
+}
 .about-section .container {
   position: relative;
 }
@@ -820,6 +855,12 @@ main.main {
 .about-section .figure figure {
   margin-right: -24px;
   margin-left: 24px;
+}
+@media screen and (max-width: 991px) {
+  .about-section .figure figure {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 .about-section .content {
   padding-top: 14px;
@@ -953,6 +994,7 @@ main.main {
 @media screen and (max-width: 767px) {
   .who-should-apply-section {
     padding-top: 100px;
+    margin-top: 30px !important;
   }
 }
 .who-should-apply-section .container {
@@ -1200,14 +1242,13 @@ main.main {
 }
 @media screen and (max-width: 991px) {
   .roadmap-section {
-    margin-top: 100px;
     padding-top: 130px;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
   }
 }
 @media screen and (max-width: 767px) {
   .roadmap-section {
-    margin-top: 60px;
+    margin-top: 30px !important;
     padding-top: 80px;
     padding-bottom: 0;
     -webkit-border-radius: 0 0 24px 24px;
@@ -1383,7 +1424,6 @@ main.main {
 @media screen and (max-width: 575px) {
   .skillset-section {
     margin-top: 0px !important;
-    padding-top: 10px;
   }
 }
 .skillset-section .container {
@@ -1404,9 +1444,11 @@ main.main {
   padding-right: 30px;
   margin-top: 32px;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 991px) {
   .skillset-section .info {
     width: 100%;
+    padding-right: 0;
+    margin-top: 0;
   }
 }
 .skillset-section .info figure {
@@ -1469,6 +1511,11 @@ main.main {
   color: rgba(0, 0, 0, 0.6);
 }
 @media screen and (max-width: 991px) {
+  .skillset-section .skills {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
   .skillset-section .skills .card-row .card {
     width: calc(100% / 2 - 28px);
   }
@@ -1509,7 +1556,7 @@ main.main {
 }
 @media screen and (max-width: 767px) {
   .artathon-goals-section {
-    margin-top: 50px !important;
+    margin-top: 30px !important;
     -webkit-border-radius: 0 0 24px 24px;
     -moz-border-radius: 0 0 24px 24px;
     border-radius: 0 0 24px 24px;
@@ -1590,7 +1637,7 @@ main.main {
 .artathon-goals-section .container .content .goal-item .icon::after {
   background: #ffffff;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 575px) {
   .artathon-goals-section .container .content .goal-item .icon {
     margin-right: 0;
     margin-bottom: 24px;
@@ -1602,7 +1649,7 @@ main.main {
 .artathon-goals-section .container .content .goal-item .description h4 {
   margin-bottom: 16px;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 575px) {
   .artathon-goals-section .container .content .goal-item .description {
     width: 100%;
   }
@@ -1767,7 +1814,7 @@ main.main {
 }
 @media screen and (max-width: 767px) {
   .faq-section {
-    margin-top: 50px !important;
+    margin-top: 0px !important;
   }
 }
 .faq-section .section-lead {
@@ -1901,10 +1948,21 @@ main.main {
 }
 .main-footer .contents-row .content,
 .main-footer .contents-row .figure {
-  width: 50%;
+  width: 50% !important;
 }
 .main-footer .contents-row .content {
   padding-right: 45px;
+  order: 1 !important;
+  margin-top: 0 !important;
+  padding-right: 25px !important;
+}
+@media screen and (max-width: 767px) {
+  .main-footer .contents-row .content {
+    width: 100% !important;
+    margin-top: 50px !important;
+    padding-right: 0 !important;
+    order: 2 !important;
+  }
 }
 .main-footer .contents-row .countdown-wrap {
   width: 406px;
@@ -1958,7 +2016,7 @@ main.main {
   }
   .main-footer .contents-row .content,
 .main-footer .contents-row .figure {
-    width: 100%;
+    width: 100% !important;
   }
   .main-footer .contents-row .figure {
     order: 1;
@@ -1977,6 +2035,11 @@ main.main {
   margin-left: auto;
   color: rgba(255, 255, 255, 0.6);
   padding-left: 25px;
+}
+@media screen and (max-width: 991px) {
+  .main-footer .copyright-row {
+    margin-top: 70px;
+  }
 }
 @media screen and (max-width: 767px) {
   .main-footer .copyright-row {
