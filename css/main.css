@@ -3234,9 +3234,9 @@ main.main {
 }
 .roadmap-section .contents-row .figure > .spinner:last-child {
   right: auto;
-  left: 1%;
+  left: -16%;
   top: auto;
-  bottom: 8%;
+  bottom: 34%;
 }
 .roadmap-section .contents-row .content {
   width: calc(100% - 45.22998296422487%);
