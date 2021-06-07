@@ -17,6 +17,9 @@ img {
 body {
    background-color: $white;
    color: $black-light3;
+   &.no-scroll {
+      overflow: hidden;
+   }
 }
 p {
    margin-bottom: 0;

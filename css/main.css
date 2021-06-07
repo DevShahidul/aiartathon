@@ -2042,6 +2042,9 @@ body {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.4);
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 p {
   margin-bottom: 0;
@@ -2405,13 +2408,6 @@ main.main {
 @media screen and (max-width: 991px) {
   .main-header {
     padding: 15px 0px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 999;
-  }
-  .main-header ~ section, .main-header ~ div {
-    margin-top: 74px;
   }
 }
 .main-header .container {
@@ -2453,6 +2449,34 @@ main.main {
   .main-header .logo-wrap .logo {
     max-width: 120px;
   }
+}
+.main-header.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 15px 0;
+  background: #f9fafd;
+  box-shadow: 0 -1px 8px rgba(38, 34, 98, 0.8);
+  -moz-transform: translateY(-1010%);
+  -o-transform: translateY(-1010%);
+  -ms-transform: translateY(-1010%);
+  -webkit-transform: translateY(-1010%);
+  transform: translateY(-1010%);
+  /* defining prefixes so we can use them in mixins below*/
+  -webkit-transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  -ms-transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  -o-transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  -transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.main-header.sticky.top {
+  -moz-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
 }
 
 .nav-toggler {
@@ -2552,6 +2576,7 @@ main.main {
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
     visibility: hidden;
+    z-index: 9999;
     /* defining prefixes so we can use them in mixins below*/
     -webkit-transition: all 0.3s ease-in;
     -ms-transition: all 0.3s ease-in;

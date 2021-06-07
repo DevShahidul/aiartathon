@@ -1,10 +1,26 @@
 (function ($) {
    // Ready function
    $(function () {
-      $("#navToggler").on("click", function (e) {
+
+      //Stiky header
+      var stickyHeader = $("header.main-header").clone().addClass('sticky').attr('id', 'home-2');
+      $('main.main').append(stickyHeader);
+
+      $(window).scroll(function () {
+         var scrollPos = $(this).scrollTop();
+         if (scrollPos > 120) {
+            $('header.main-header.sticky').addClass('top');
+         } else {
+            $('header.main-header.sticky').removeClass('top');
+         }
+      })
+
+
+      $(".nav-toggler").on("click", function (e) {
          e.preventDefault();
          $(this).toggleClass('expanded');
-         $("div.nav-wrap").toggleClass('expanded');
+         $(this).parents('header.main-header').find("div.nav-wrap").toggleClass('expanded');
+         $('body').toggleClass('no-scroll');
       })
 
       // Accordion function
@@ -28,8 +44,9 @@
       var $root = $('html, body');
 
       $('.nav-wrap ul li a[href^="#"]').click(function () {
-         $("#navToggler").removeClass('expanded');
+         $(".nav-toggler").removeClass('expanded');
          $("div.nav-wrap").removeClass('expanded');
+         $('body').removeClass('no-scroll');
          $root.animate({
             scrollTop: $($.attr(this, 'href')).offset().top
          }, 500);
