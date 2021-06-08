@@ -16,6 +16,61 @@
          margin-bottom: 26px;
       }
    }
+   .card-row {
+      .card {
+         figure {
+            position: relative;
+            @include transition(width 0.3s ease-in, height 0.3s ease-in);
+            img {
+               @include transition(all 0.3s ease-in);
+               @include centerBoth;
+               &.white {
+                  opacity: 0;
+                  visibility: hidden;
+               }
+            }
+         }
+         h5 {
+            @include transition(all 0.3s ease-in);
+         }
+         p {
+            height: 0;
+            overflow: hidden;
+            @include transition(all 0.3s ease-in);
+            @include transform(scaleY(0));
+         }
+         &:hover {
+            background: $primary-gradient;
+            color: $white;
+            padding-bottom: 35px;
+            figure {
+               width: 60px;
+               height: 60px;
+               background: transparent;
+               img {
+                  &:not(.white) {
+                     opacity: 0;
+                     visibility: hidden;
+                  }
+                  &.white {
+                     opacity: 1;
+                     visibility: visible;
+                  }
+               }
+            }
+            h5 {
+               margin-top: 11px;
+               color: $white;
+            }
+            p {
+               margin-top: 24px;
+               height: auto;
+               overflow: visible;
+               @include transform(scaleY(1));
+            }
+         }
+      }
+   }
 }
 .card-row {
    margin-left: -10px;
@@ -46,10 +101,7 @@
          position: relative;
          @include border-radius(38px);
          @include flex(center);
-         @include transition(width 0.3s ease-in, height 0.3s ease-in);
          img {
-            @include transition(all 0.3s ease-in);
-            @include centerBoth;
             max-width: 60px;
             &.white {
                opacity: 0;
@@ -64,43 +116,9 @@
          font-weight: $semibold-font-weight;
       }
       p {
-         // margin-top: 24px;
+         margin-top: 24px;
          font-size: 14px;
          line-height: 25px;
-         height: 0;
-         overflow: hidden;
-         @include transition(all 0.3s ease-in);
-         @include transform(scaleY(0));
-      }
-      &:hover {
-         background: $primary-gradient;
-         color: $white;
-         padding-bottom: 35px;
-         figure {
-            width: 60px;
-            height: 60px;
-            background: transparent;
-            img {
-               &:not(.white) {
-                  opacity: 0;
-                  visibility: hidden;
-               }
-               &.white {
-                  opacity: 1;
-                  visibility: visible;
-               }
-            }
-         }
-         h5 {
-            margin-top: 11px;
-            color: $white;
-         }
-         p {
-            margin-top: 24px;
-            height: auto;
-            overflow: visible;
-            @include transform(scaleY(1));
-         }
       }
    }
 }
