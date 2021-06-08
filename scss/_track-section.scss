@@ -46,7 +46,7 @@
          position: relative;
          @include border-radius(38px);
          @include flex(center);
-         @include transition(all 0.3s ease-in);
+         @include transition(width 0.3s ease-in, height 0.3s ease-in);
          img {
             @include transition(all 0.3s ease-in);
             @include centerBoth;

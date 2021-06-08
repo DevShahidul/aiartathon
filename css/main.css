@@ -3059,11 +3059,11 @@ main.main {
   align-items: center;
   justify-content: center;
   /* defining prefixes so we can use them in mixins below*/
-  -webkit-transition: all 0.3s ease-in;
-  -ms-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  -transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: width 0.3s ease-in, height 0.3s ease-in;
+  -ms-transition: width 0.3s ease-in, height 0.3s ease-in;
+  -o-transition: width 0.3s ease-in, height 0.3s ease-in;
+  -transition: width 0.3s ease-in, height 0.3s ease-in;
+  transition: width 0.3s ease-in, height 0.3s ease-in;
 }
 .card-row .card figure img {
   /* defining prefixes so we can use them in mixins below*/
