@@ -8,6 +8,16 @@
    }
 }
 
+// use of keyframes mixin
+@include keyframes(spinBack) {
+   0% {
+      @include transform(rotate(0deg));
+   }
+   100% {
+      @include transform(rotate(-360deg));
+   }
+}
+
 // Blink with zoome
 @include keyframes(blink) {
    0% {
@@ -77,4 +87,8 @@
    animation-duration: 8s;
    animation-iteration-count: infinite;
    animation-timing-function: linear;
+   &.back {
+      animation-name: spinBack;
+      animation-delay: 4s;
+   }
 }

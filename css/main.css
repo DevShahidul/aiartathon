@@ -1859,6 +1859,70 @@ p {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes spinBack {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes spinBack {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+@-ms-keyframes spinBack {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+@keyframes spinBack {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
 @-webkit-keyframes blink {
   0% {
     -moz-transform: scale(1);
@@ -2016,6 +2080,10 @@ p {
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+.spinner.back {
+  animation-name: spinBack;
+  animation-delay: 4s;
 }
 
 * {
@@ -2999,6 +3067,7 @@ main.main {
 .who-should-apply-section {
   margin-top: 180px;
   padding-top: 160px;
+  padding-bottom: 60px;
 }
 .who-should-apply-section::after {
   -moz-transform: skew(0deg, 4deg);
@@ -3114,7 +3183,7 @@ main.main {
 .who-should-apply-section .description-col {
   width: 44.8186528497%;
   background-color: #ffffff;
-  padding: 50px 41px 0 46px;
+  padding: 50px 41px 50px 46px;
   -webkit-border-radius: 34px;
   -moz-border-radius: 34px;
   border-radius: 34px;
@@ -3123,6 +3192,11 @@ main.main {
   .who-should-apply-section .description-col {
     width: 100%;
     margin-top: 50px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .who-should-apply-section .description-col {
+    padding: 30px 20px;
   }
 }
 .who-should-apply-section .description-col h2 {
@@ -3414,6 +3488,7 @@ main.main {
 @media screen and (max-width: 767px) {
   .roadmap-section .contents-row .content-item ul::before {
     left: 6px;
+    bottom: -15px;
   }
 }
 .roadmap-section .contents-row .content-item ul li {
@@ -3806,6 +3881,7 @@ main.main {
   width: 285px;
   height: 1656px;
   left: 0;
+  right: auto;
   top: 50px;
   background-image: url(../images/weve-line-2.jpg);
   background-position: top;
@@ -3895,6 +3971,137 @@ main.main {
 }
 .faq-section .item-row ul li + li {
   margin-top: 6px;
+}
+
+[dir=rtl] .logo-wrap {
+  order: 1;
+}
+[dir=rtl] .logo-wrap .logo {
+  order: 1;
+}
+@media screen and (max-width: 991px) {
+  [dir=rtl] .nav-wrap:not(.expanded) .nav {
+    -moz-transform: translateX(101%);
+    -o-transform: translateX(101%);
+    -ms-transform: translateX(101%);
+    -webkit-transform: translateX(101%);
+    transform: translateX(101%);
+  }
+}
+[dir=rtl] .about-section .content {
+  padding-right: 0;
+  padding-left: 70px;
+}
+[dir=rtl] .about-section::after {
+  height: 2110px;
+}
+[dir=rtl] .contents-row ul li {
+  padding-left: 0;
+  padding-right: 30px;
+}
+[dir=rtl] .contents-row ul li::before {
+  left: auto;
+  right: 0;
+}
+[dir=rtl] .who-should-apply-section .options-col .option-wrap {
+  padding-left: 20px;
+  padding-right: 10%;
+}
+[dir=rtl] .who-should-apply-section .options-col .option-wrap:first-child {
+  padding-left: 10%;
+  padding-right: 40px;
+}
+[dir=rtl] .roadmap-section .contents-row .content {
+  padding-left: 0;
+  padding-right: 66px;
+}
+[dir=rtl] .roadmap-section .contents-row .content-item h4,
+[dir=rtl] .roadmap-section .contents-row .content-item ul {
+  padding-left: 0;
+  padding-right: 72px;
+}
+[dir=rtl] .roadmap-section .contents-row .content-item h4::before,
+[dir=rtl] .roadmap-section .contents-row .content-item ul::before {
+  left: auto;
+  right: 0;
+}
+@media screen and (max-width: 767px) {
+  [dir=rtl] .roadmap-section .contents-row .content-item h4,
+[dir=rtl] .roadmap-section .contents-row .content-item ul {
+    padding-right: 40px;
+  }
+}
+[dir=rtl] .roadmap-section .contents-row .content-item ul::before {
+  right: 7px;
+}
+@media screen and (max-width: 767px) {
+  [dir=rtl] .roadmap-section .contents-row .content-item ul::before {
+    right: 6px;
+  }
+}
+[dir=rtl] .roadmap-section .contents-row .content-item ul li {
+  padding-right: 0;
+}
+[dir=rtl] .roadmap-section .contents-row .figure .spinner:last-child {
+  left: 22%;
+  bottom: 0;
+}
+[dir=rtl] .skillset-section .info {
+  padding-right: 0;
+  padding-left: 30px;
+}
+[dir=rtl] .artathon-goals-section .container .figure {
+  padding-left: 32px;
+  padding-right: 70px;
+}
+[dir=rtl] .artathon-goals-section .container .content {
+  padding-right: 0;
+  padding-left: 10px;
+}
+[dir=rtl] .artathon-goals-section .container .content .goal-item .icon {
+  margin-right: 0;
+  margin-left: 36px;
+}
+[dir=rtl] .registration-section .figure,
+[dir=rtl] .registration-section .content {
+  padding-left: 0;
+  padding-right: 67px;
+}
+[dir=rtl] .registration-section .figure {
+  padding-right: 85px;
+}
+[dir=rtl] .registration-section .card-row .card-item + .card-item {
+  margin-left: 0;
+  margin-right: 40px;
+}
+@media screen and (max-width: 767px) {
+  [dir=rtl] .registration-section .card-row .card-item + .card-item {
+    margin-right: 0;
+  }
+}
+[dir=rtl] .faq-section .item-row ul li {
+  padding-left: 0;
+  padding-right: 30px;
+}
+[dir=rtl] .faq-section .item-row ul li::before {
+  left: auto;
+  right: 0;
+}
+[dir=rtl] .main-footer .contents-row .countdown-wrap {
+  margin-right: auto;
+  margin-left: 45px;
+}
+[dir=rtl] .main-footer .contents-row .content {
+  padding-right: 0 !important;
+  padding-left: 25px !important;
+}
+[dir=rtl] .main-footer .copyright-row p {
+  padding-left: 0;
+  padding-right: 25px;
+}
+[dir=rtl] .program-phases-section.weve-line::before {
+  right: auto;
+  left: 0;
 }
 
 .main-footer {

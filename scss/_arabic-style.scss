@@ -1,0 +1,177 @@
+[dir="rtl"] {
+   .logo-wrap {
+      order: 1;
+      .logo {
+         order: 1;
+      }
+   }
+   @media screen and (max-width: 991px) {
+      .nav-wrap {
+         &:not(.expanded) {
+            .nav {
+               @include transform(translateX(101%));
+            }
+         }
+      }
+   }
+   .about-section {
+      .content {
+         padding-right: 0;
+         padding-left: 70px;
+      }
+      &::after {
+         height: 2110px;
+      }
+   }
+
+   .contents-row {
+      ul {
+         li {
+            padding-left: 0;
+            padding-right: 30px;
+            &::before {
+               left: auto;
+               right: 0;
+            }
+         }
+      }
+   }
+   .who-should-apply-section {
+      .options-col {
+         .option-wrap {
+            padding-left: 20px;
+            padding-right: 10%;
+            &:first-child {
+               padding-left: 10%;
+               padding-right: 40px;
+            }
+         }
+      }
+   }
+   .roadmap-section {
+      .contents-row {
+         .content {
+            padding-left: 0;
+            padding-right: 66px;
+         }
+         .content-item {
+            h4,
+            ul {
+               padding-left: 0;
+               padding-right: 72px;
+               &::before {
+                  left: auto;
+                  right: 0;
+               }
+               @media screen and (max-width: 767px) {
+                  padding-right: 40px;
+               }
+            }
+            ul {
+               &::before {
+                  right: 7px;
+                  @media screen and (max-width: 767px) {
+                     right: 6px;
+                  }
+               }
+               li {
+                  padding-right: 0;
+               }
+            }
+         }
+         .figure {
+            .spinner {
+               &:last-child {
+                  left: 22%;
+                  bottom: 0;
+               }
+            }
+         }
+      }
+   }
+   .skillset-section {
+      .info {
+         padding-right: 0;
+         padding-left: 30px;
+      }
+   }
+   .artathon-goals-section {
+      .container {
+         .figure {
+            padding-left: 32px;
+            padding-right: 70px;
+         }
+         .content {
+            padding-right: 0;
+            padding-left: 10px;
+            .goal-item {
+               .icon {
+                  margin-right: 0;
+                  margin-left: 36px;
+               }
+            }
+         }
+      }
+   }
+   .registration-section {
+      .figure,
+      .content {
+         padding-left: 0;
+         padding-right: 67px;
+      }
+      .figure {
+         padding-right: 85px;
+      }
+      .card-row {
+         .card-item {
+            & + .card-item {
+               margin-left: 0;
+               margin-right: 40px;
+               @media screen and (max-width: 767px) {
+                  margin-right: 0;
+               }
+            }
+         }
+      }
+   }
+   .faq-section {
+      .item-row {
+         ul {
+            li {
+               padding-left: 0;
+               padding-right: 30px;
+               &::before {
+                  left: auto;
+                  right: 0;
+               }
+            }
+         }
+      }
+   }
+   .main-footer {
+      .contents-row {
+         .countdown-wrap {
+            margin-right: auto;
+            margin-left: 45px;
+         }
+         .content {
+            padding-right: 0 !important;
+            padding-left: 25px !important;
+         }
+      }
+      .copyright-row {
+         p {
+            padding-left: 0;
+            padding-right: 25px;
+         }
+      }
+   }
+   .program-phases-section {
+      &.weve-line {
+         &::before {
+            right: auto;
+            left: 0;
+         }
+      }
+   }
+}
