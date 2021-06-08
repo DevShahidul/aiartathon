@@ -4133,6 +4133,13 @@ main.main {
 .language-switcher a + a {
   margin-left: 10px;
 }
+.language-switcher a:hover {
+  color: #000000;
+}
+.language-switcher span {
+  font-size: 14px;
+  margin-right: 5px;
+}
 
 .main-footer {
   margin-top: 124px;

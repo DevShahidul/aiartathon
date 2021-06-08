@@ -15,5 +15,12 @@
       & + a {
          margin-left: 10px;
       }
+      &:hover {
+         color: $black;
+      }
+   }
+   span {
+      font-size: 14px;
+      margin-right: 5px;
    }
 }
