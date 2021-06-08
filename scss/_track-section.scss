@@ -46,9 +46,9 @@
          position: relative;
          @include border-radius(38px);
          @include flex(center);
-         @include transition(all 0.2s ease-in);
+         @include transition(all 0.3s ease-in);
          img {
-            @include transition(all 0.2s ease-in);
+            @include transition(all 0.3s ease-in);
             @include centerBoth;
             max-width: 60px;
             &.white {
@@ -58,7 +58,7 @@
          }
       }
       h5 {
-         @include transition(all 0.2s ease-in);
+         @include transition(all 0.3s ease-in);
          margin: 34px auto 0;
          text-transform: capitalize;
          font-weight: $semibold-font-weight;
@@ -69,7 +69,7 @@
          line-height: 25px;
          height: 0;
          overflow: hidden;
-         @include transition(all 0.2s ease-in);
+         @include transition(all 0.3s ease-in);
          @include transform(scaleY(0));
       }
       &:hover {
