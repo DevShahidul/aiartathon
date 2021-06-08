@@ -174,4 +174,13 @@
          }
       }
    }
+
+   .language-switcher {
+      a {
+         & + a {
+            margin-left: 0;
+            margin-right: 10px;
+         }
+      }
+   }
 }

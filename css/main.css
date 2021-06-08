@@ -2491,6 +2491,8 @@ main.main {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  position: relative;
+  padding-top: 20px;
 }
 .main-header .logo-wrap {
   margin-left: 27px;
@@ -4102,6 +4104,34 @@ main.main {
 [dir=rtl] .program-phases-section.weve-line::before {
   right: auto;
   left: 0;
+}
+[dir=rtl] .language-switcher a + a {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.language-switcher {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  margin-right: 77px;
+}
+@media screen and (max-width: 991px) {
+  .language-switcher {
+    margin-right: 55px;
+    top: -10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .language-switcher {
+    margin-right: 20px;
+  }
+}
+.language-switcher a {
+  font-size: 12px;
+}
+.language-switcher a + a {
+  margin-left: 10px;
 }
 
 .main-footer {

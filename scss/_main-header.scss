@@ -8,6 +8,8 @@
       width: 1354px;
       flex-flow: row wrap;
       @include flex(centerY);
+      position: relative;
+      padding-top: 20px;
    }
    .logo-wrap {
       margin-left: 27px;
