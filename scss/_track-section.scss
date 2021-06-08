@@ -25,11 +25,12 @@
    flex-flow: row wrap;
    .card {
       width: calc((100% / 4) - 20px);
-      padding: 74px 30px;
-      background-color: $secondary;
+      padding: 74px 20px;
+      background: $secondary;
       margin: 20px 10px 0;
       text-align: center;
       @include border-radius(44px);
+      position: relative;
       @media screen and (max-width: 991px) {
          width: calc((100% / 2) - 20px);
       }
@@ -42,16 +43,64 @@
          display: block;
          margin: 0 auto;
          background-color: $white;
+         position: relative;
          @include border-radius(38px);
          @include flex(center);
+         @include transition(all 0.2s ease-in);
          img {
+            @include transition(all 0.2s ease-in);
+            @include centerBoth;
             max-width: 60px;
+            &.white {
+               opacity: 0;
+               visibility: hidden;
+            }
          }
       }
       h5 {
+         @include transition(all 0.2s ease-in);
          margin: 34px auto 0;
          text-transform: capitalize;
          font-weight: $semibold-font-weight;
+      }
+      p {
+         // margin-top: 24px;
+         font-size: 14px;
+         line-height: 25px;
+         height: 0;
+         overflow: hidden;
+         @include transition(all 0.2s ease-in);
+         @include transform(scaleY(0));
+      }
+      &:hover {
+         background: $primary-gradient;
+         color: $white;
+         padding-bottom: 35px;
+         figure {
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            img {
+               &:not(.white) {
+                  opacity: 0;
+                  visibility: hidden;
+               }
+               &.white {
+                  opacity: 1;
+                  visibility: visible;
+               }
+            }
+         }
+         h5 {
+            margin-top: 11px;
+            color: $white;
+         }
+         p {
+            margin-top: 24px;
+            height: auto;
+            overflow: visible;
+            @include transform(scaleY(1));
+         }
       }
    }
 }

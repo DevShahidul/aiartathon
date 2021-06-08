@@ -3018,13 +3018,14 @@ main.main {
 }
 .card-row .card {
   width: calc((100% / 4) - 20px);
-  padding: 74px 30px;
-  background-color: #f9fafd;
+  padding: 74px 20px;
+  background: #f9fafd;
   margin: 20px 10px 0;
   text-align: center;
   -webkit-border-radius: 44px;
   -moz-border-radius: 44px;
   border-radius: 44px;
+  position: relative;
 }
 @media screen and (max-width: 991px) {
   .card-row .card {
@@ -3042,6 +3043,7 @@ main.main {
   display: block;
   margin: 0 auto;
   background-color: #ffffff;
+  position: relative;
   -webkit-border-radius: 38px;
   -moz-border-radius: 38px;
   border-radius: 38px;
@@ -3056,14 +3058,94 @@ main.main {
   -webkit-align-items: center;
   align-items: center;
   justify-content: center;
+  /* defining prefixes so we can use them in mixins below*/
+  -webkit-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 .card-row .card figure img {
+  /* defining prefixes so we can use them in mixins below*/
+  -webkit-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
   max-width: 60px;
 }
+.card-row .card figure img.white {
+  opacity: 0;
+  visibility: hidden;
+}
 .card-row .card h5 {
+  /* defining prefixes so we can use them in mixins below*/
+  -webkit-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   margin: 34px auto 0;
   text-transform: capitalize;
   font-weight: 600;
+}
+.card-row .card p {
+  font-size: 14px;
+  line-height: 25px;
+  height: 0;
+  overflow: hidden;
+  /* defining prefixes so we can use them in mixins below*/
+  -webkit-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -moz-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+}
+.card-row .card:hover {
+  background: linear-gradient(97.3deg, #221f57 -25.36%, #5b2a85 23.23%, #a22886 62.23%, #eb2770 106.03%);
+  color: #ffffff;
+  padding-bottom: 35px;
+}
+.card-row .card:hover figure {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+}
+.card-row .card:hover figure img:not(.white) {
+  opacity: 0;
+  visibility: hidden;
+}
+.card-row .card:hover figure img.white {
+  opacity: 1;
+  visibility: visible;
+}
+.card-row .card:hover h5 {
+  margin-top: 11px;
+  color: #ffffff;
+}
+.card-row .card:hover p {
+  margin-top: 24px;
+  height: auto;
+  overflow: visible;
+  -moz-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 .who-should-apply-section {
