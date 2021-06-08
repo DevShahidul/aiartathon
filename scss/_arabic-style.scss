@@ -49,6 +49,15 @@
       }
    }
    .roadmap-section {
+      .section-lead {
+         .spinner {
+            left: -15%;
+            &:last-child {
+               right: -10%;
+               left: auto;
+            }
+         }
+      }
       .contents-row {
          .content {
             padding-left: 0;
@@ -163,6 +172,8 @@
          p {
             padding-left: 0;
             padding-right: 25px;
+            margin-right: auto;
+            margin-left: 0;
          }
       }
    }

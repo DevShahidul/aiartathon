@@ -95,7 +95,10 @@ p {
    .spinner {
       top: -50%;
       margin-left: 5%;
+      right: auto;
+      left: 0;
       &:last-child {
+         left: auto;
          right: 5%;
          top: -55%;
          margin-right: 0;

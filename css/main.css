@@ -2209,8 +2209,11 @@ p {
 .section-lead .spinner {
   top: -50%;
   margin-left: 5%;
+  right: auto;
+  left: 0;
 }
 .section-lead .spinner:last-child {
+  left: auto;
   right: 5%;
   top: -55%;
   margin-right: 0;
@@ -4115,6 +4118,13 @@ main.main {
   padding-left: 10%;
   padding-right: 40px;
 }
+[dir=rtl] .roadmap-section .section-lead .spinner {
+  left: -15%;
+}
+[dir=rtl] .roadmap-section .section-lead .spinner:last-child {
+  right: -10%;
+  left: auto;
+}
 [dir=rtl] .roadmap-section .contents-row .content {
   padding-left: 0;
   padding-right: 66px;
@@ -4202,6 +4212,8 @@ main.main {
 [dir=rtl] .main-footer .copyright-row p {
   padding-left: 0;
   padding-right: 25px;
+  margin-right: auto;
+  margin-left: 0;
 }
 [dir=rtl] .program-phases-section.weve-line::before {
   right: auto;
