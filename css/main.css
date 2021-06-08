@@ -4237,6 +4237,10 @@ main.main {
   margin-right: 5px;
 }
 
+.sticky .language-switcher {
+  top: -10px;
+}
+
 .main-footer {
   margin-top: 124px;
   padding-top: 286px;
