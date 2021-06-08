@@ -4105,16 +4105,13 @@ main.main {
   right: auto;
   left: 0;
 }
-[dir=rtl] .language-switcher a + a {
-  margin-left: 0;
-  margin-right: 10px;
-}
 
 .language-switcher {
   position: absolute;
   top: -20px;
   right: 0;
   margin-right: 77px;
+  font-size: 12px;
 }
 @media screen and (max-width: 991px) {
   .language-switcher {
@@ -4128,10 +4125,7 @@ main.main {
   }
 }
 .language-switcher a {
-  font-size: 12px;
-}
-.language-switcher a + a {
-  margin-left: 10px;
+  text-transform: uppercase;
 }
 .language-switcher a:hover {
   color: #000000;

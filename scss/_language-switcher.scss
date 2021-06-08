@@ -3,6 +3,7 @@
    top: -20px;
    right: 0;
    margin-right: 77px;
+   font-size: 12px;
    @media screen and (max-width: 991px) {
       margin-right: 55px;
       top: -10px;
@@ -11,13 +12,10 @@
       margin-right: 20px;
    }
    a {
-      font-size: 12px;
-      & + a {
-         margin-left: 10px;
-      }
       &:hover {
          color: $black;
       }
+      text-transform: uppercase;
    }
    span {
       font-size: 14px;
