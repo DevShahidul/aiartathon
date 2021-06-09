@@ -5,6 +5,12 @@
          order: 1;
       }
    }
+   .countdown {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+   }
    @media screen and (max-width: 991px) {
       .nav-wrap {
          &:not(.expanded) {

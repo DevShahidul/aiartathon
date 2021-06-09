@@ -3034,6 +3034,24 @@ main.main {
 .track-section .section-lead h2 {
   margin-bottom: 26px;
 }
+.track-section .card-row .card {
+  max-height: 390px;
+}
+@media screen and (max-width: 1200px) {
+  .track-section .card-row .card {
+    max-height: 389px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .track-section .card-row .card {
+    max-height: 359px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .track-section .card-row .card {
+    max-height: 377px;
+  }
+}
 .track-section .card-row .card figure {
   position: relative;
   /* defining prefixes so we can use them in mixins below*/
@@ -3196,6 +3214,12 @@ main.main {
   margin-top: 24px;
   font-size: 14px;
   line-height: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  [lang=ar] .track-section .card-row .card {
+    max-height: 419px;
+  }
 }
 
 .who-should-apply-section {
@@ -4112,6 +4136,12 @@ main.main {
 }
 [dir=rtl] .logo-wrap .logo {
   order: 1;
+}
+[dir=rtl] .countdown {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 @media screen and (max-width: 991px) {
   [dir=rtl] .nav-wrap:not(.expanded) .nav {

@@ -18,6 +18,16 @@
    }
    .card-row {
       .card {
+         max-height: 390px;
+         @media screen and (max-width: 1200px) {
+            max-height: 389px;
+         }
+         @media screen and (max-width: 991px) {
+            max-height: 359px;
+         }
+         @media screen and (max-width: 767px) {
+            max-height: 377px;
+         }
          figure {
             position: relative;
             @include transition(width 0.3s ease-in, height 0.3s ease-in);
@@ -119,6 +129,18 @@
          margin-top: 24px;
          font-size: 14px;
          line-height: 25px;
+      }
+   }
+}
+
+[lang="ar"] {
+   .track-section {
+      .card-row {
+         .card {
+            @media screen and (max-width: 1200px) {
+               max-height: 419px;
+            }
+         }
       }
    }
 }
