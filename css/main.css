@@ -1751,6 +1751,33 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+[lang=ar] h2,
+[lang=ar] h3,
+[lang=ar] h4,
+[lang=ar] h5,
+[lang=ar] h6,
+[lang=ar] body {
+  font-family: "Almarai", sans-serif;
+}
+[lang=ar] h2,
+[lang=ar] h3,
+[lang=ar] h4,
+[lang=ar] h5,
+[lang=ar] h6,
+[lang=ar] .card-row .card h5,
+[lang=ar] .who-should-apply-section .options-col .option-wrap ul li,
+[lang=ar] .program-phases-section .card-row .card span,
+[lang=ar] .roadmap-section .contents-row .content-item h4,
+[lang=ar] .skillset-section .skills .card-row .card span {
+  font-weight: 700;
+}
+[lang=ar] .countdown {
+  font-family: "Poppins", sans-serif;
+}
+[lang=ar] .nav-wrap ul li a {
+  font-weight: 700;
+}
+
 p {
   letter-spacing: 0.02em;
 }

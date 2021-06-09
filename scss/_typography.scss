@@ -47,6 +47,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+[lang="ar"] {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  body {
+    font-family: $arabic-font;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .card-row .card h5,
+  .who-should-apply-section .options-col .option-wrap ul li,
+  .program-phases-section .card-row .card span,
+  .roadmap-section .contents-row .content-item h4,
+  .skillset-section .skills .card-row .card span {
+    font-weight: $bold-font-weight;
+  }
+  .countdown {
+    font-family: $default-font;
+  }
+  .nav-wrap {
+    ul {
+      li {
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
 
 p {
   letter-spacing: 0.02em;
