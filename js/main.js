@@ -15,7 +15,6 @@
          }
       })
 
-
       $(".nav-toggler").on("click", function (e) {
          e.preventDefault();
          $(this).toggleClass('expanded');
@@ -42,7 +41,6 @@
 
       // Smoth scroll
       var $root = $('html, body');
-
       $('.nav-wrap ul li a[href^="#"]').click(function () {
          $(".nav-toggler").removeClass('expanded');
          $("div.nav-wrap").removeClass('expanded');
@@ -59,10 +57,11 @@
       // AOS animation
       AOS.init();
 
+      // Beginning timr function
       var endTheTime = false;
       var timer = $(".countdown");
       if (timer.length) {
-
+         // Added markup for timer
          timer.html(
             '<div class="days">0</div> <span>:</span>' +
             '<div class="hours"> 0</div> <span>:</span>' +
@@ -72,7 +71,7 @@
 
          // Timer function
          function makeTimer() {
-            //		var endTime = new Date("29 April 2020 9:56:00 GMT+01:00");
+            //	var endTime = new Date("29 April 2020 9:56:00 GMT+01:00");
             var ending = jQuery(".countdown").attr("data-endtime");
             var endTime = new Date(ending);
             endTime = (Date.parse(endTime) / 1000);
@@ -81,7 +80,6 @@
             now = (Date.parse(now) / 1000);
 
             var timeLeft = endTime - now;
-
             var days = Math.floor(timeLeft / 86400);
             var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
             var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
@@ -93,7 +91,6 @@
             if (timeLeft <= 1) {
                endTheTime = true;
             }
-
             timer.html(
                '<div class="days">' + days + '</div> <span>:</span>' +
                '<div class="hours">' + hours + '</div> <span>:</span>' +
@@ -102,9 +99,7 @@
             );
 
          }
-
          setInterval(function () { makeTimer(); }, 1000);
       }
-
    })
 })(jQuery);

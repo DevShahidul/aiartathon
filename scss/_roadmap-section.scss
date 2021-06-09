@@ -2,11 +2,7 @@
    margin-top: 120px;
    padding-top: 203px;
    padding-bottom: 146px;
-   //background: linear-gradient(180deg, #f9fafd 63.69%, rgba(244, 246, 251, 0) 100%);
    @include border-radius(0 0 54px 54px);
-   // -webkit-clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
-   // clip-path: polygon(0 95px, 100% 0, 100% 100%, 0 100%);
-   //transform: matrix(-1, 0, 0, 1, 0, 0);
    position: relative;
    overflow: hidden;
    z-index: 1;
@@ -32,8 +28,6 @@
       padding-top: 80px;
       padding-bottom: 0;
       @include border-radius(0 0 24px 24px);
-      // -webkit-clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
-      // clip-path: polygon(0 35px, 100% 0, 100% 100%, 0 100%);
    }
    .container {
       width: 1274px;
@@ -46,11 +40,6 @@
       @media screen and (max-width: 767px) {
          margin-top: 0px;
       }
-      // & > .spinner {
-      //    left: 4%;
-      //    bottom: 28%;
-      //    top: auto;
-      // }
       .figure {
          width: 45.22998296422487%;
          margin-top: 147px;
